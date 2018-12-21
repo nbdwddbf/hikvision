@@ -1,0 +1,4 @@
+// Microsoft Visual C++ generated Help ID include file.
+// Used by ClientDemoEn.rc
+//
+#define HIDC_CHECK_FONT_ENABLE          0x808e0804    // IDD_DLG_INFO_DIFFUSION_CONTENT

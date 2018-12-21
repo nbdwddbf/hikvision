@@ -1,0 +1,400 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Manage.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Manage.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Manage"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Manage 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_MANAGE_DIALOG DIALOGEX 0, 0, 568, 462
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Manage"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "IPAddress1",IDC_IPADDRESS_DEV,"SysIPAddress32",
+                    WS_TABSTOP,49,13,73,13
+    EDITTEXT        IDC_EDIT_PORT,151,13,41,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,221,13,52,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PWD,317,13,45,13,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Login",IDC_BUTTON_LOGIN,376,13,33,16
+    LTEXT           "Dev IP",IDC_STATIC,23,16,25,8
+    LTEXT           "Port",IDC_STATIC,129,16,17,8
+    LTEXT           "User",IDC_STATIC,199,16,17,8
+    LTEXT           "Password",IDC_STATIC,279,16,33,8
+    PUSHBUTTON      "校时",IDC_BUTTON_CHECK_TIME,509,76,41,14
+    PUSHBUTTON      "升级",IDC_BUTTON_UPDATE,509,113,41,14
+    PUSHBUTTON      "重启",IDC_BUTTON_REBOOT,509,181,41,14
+    PUSHBUTTON      "格式化",IDC_BUTTON_HD_FORMAT,509,147,41,14
+    PUSHBUTTON      "关闭",IDC_BUTTON_SHUTDOWN,511,216,41,14
+    PUSHBUTTON      "恢复默认参数",IDC_BUTTON_DEFAULT_CFG,502,250,58,14
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",TCS_FIXEDWIDTH,15,36,
+                    484,411
+END
+
+IDD_DIALOG_CHECK_TIME DIALOG DISCARDABLE  0, 0, 202, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "校时"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "退出",IDCANCEL,111,53,50,14
+    CONTROL         "DateTimePicker1",IDC_CHECK_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP,31,17,58,16
+    CONTROL         "DateTimePicker1",IDC_CHECK_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,106,17,54,
+                    16
+    PUSHBUTTON      "校时",IDC_BUTTON_CHECK_TIME,39,54,50,14
+END
+
+IDD_DIALOG_UPDATE DIALOG DISCARDABLE  0, 0, 308, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "升级"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "升级文件",IDC_STATIC,19,55,38,10
+    EDITTEXT        IDC_EDIT_UPGRADE_FILE,60,53,184,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSE_FILE,249,53,42,15
+    LTEXT           "状态:",IDC_STATIC_UPGRADE,31,79,231,10,NOT WS_VISIBLE
+    PUSHBUTTON      "升级",IDC_BTN_UPGRADE,64,116,42,15
+    PUSHBUTTON      "退出",IDC_BTN_UPGRADE_EXIT,195,115,42,15
+    GROUPBOX        "",IDC_STATIC,13,13,284,126
+    CONTROL         "",IDC_PROGRESS_UPGRADE,"msctls_progress32",WS_BORDER | 
+                    WS_TABSTOP,24,96,267,10
+    LTEXT           "网络环境",IDC_STATIC,21,27,33,9
+    COMBOBOX        IDC_COMBO_ENVIRONMENT,59,27,48,41,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "设置网络环境",IDC_BTN_SET_ENVIRO,120,27,52,15
+END
+
+IDD_DIALOG_FORMAT_HD DIALOG DISCARDABLE  0, 0, 206, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "格式化设备硬盘"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "格式化",IDC_BTN_DO_FORMAT,22,45,51,16
+    PUSHBUTTON      "退出",IDC_BTN_FORMAT_EXIT,117,45,51,16
+    COMBOBOX        IDC_COMBO_HD_DRIVER,61,19,95,65,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_PROGRESS_FORMAT,"msctls_progress32",WS_BORDER,22,
+                    80,161,12
+    LTEXT           "状态",IDC_STATIC_FORMAT,24,68,158,9
+    LTEXT           "盘符",IDC_STATIC,25,22,31,9
+END
+
+IDD_DIALOG_LOG_SEARCH DIALOG DISCARDABLE  0, 0, 486, 403
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_LIST_DEVICE_LOG,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,13,70,453,298
+    LTEXT           "查询类型",IDC_STATIC,25,28,32,10
+    COMBOBOX        IDC_COMBO_MODE,75,25,69,52,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "主类型",IDC_STATIC,187,27,32,10
+    COMBOBOX        IDC_COMBO_MAJOR_TYPE,225,25,69,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "次类型",IDC_STATIC,319,27,32,10
+    COMBOBOX        IDC_COMBO_MINOR_TYPE,353,25,104,335,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "开始时间",IDC_STATIC,25,49,33,10
+    CONTROL         "",IDC_DATE_LOG_START,"SysDateTimePick32",DTS_RIGHTALIGN | 
+                    WS_TABSTOP,75,46,59,13
+    CONTROL         "",IDC_TIME_LOG_START,"SysDateTimePick32",DTS_RIGHTALIGN | 
+                    DTS_UPDOWN | WS_TABSTOP | 0x8,139,46,49,13
+    CONTROL         "",IDC_DATE_LOG_STOP,"SysDateTimePick32",DTS_RIGHTALIGN | 
+                    WS_TABSTOP,265,45,59,13
+    CONTROL         "",IDC_TIME_LOG_STOP,"SysDateTimePick32",DTS_RIGHTALIGN | 
+                    DTS_UPDOWN | WS_TABSTOP | 0x8,329,44,49,13
+    LTEXT           "结束时间",IDC_STATIC,221,49,33,10
+    PUSHBUTTON      "搜索日志",IDC_BTN_SEARCH,413,369,43,14
+    GROUPBOX        "",IDC_STATIC,13,16,453,49
+    GROUPBOX        "",IDC_STATIC,7,7,468,383
+    LTEXT           "搜索状态...",IDC_STATIC_SEARCH,19,373,155,14
+    CONTROL         "硬盘smart信息",IDC_CHK_SMART,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,387,46,65,11
+END
+
+IDD_DIALOG_DEVICE_STATE DIALOG DISCARDABLE  0, 0, 492, 405
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_LIST_CHAN_STATE,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,23,53,440,175
+    CONTROL         "",IDC_LIST_DISK_STATE,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,23,243,440,123
+    LTEXT           "",IDC_STATIC_DEVSTATE,57,17,51,13,WS_BORDER
+    PUSHBUTTON      "刷新",ID_BTN_REFRESH,397,373,50,15
+    GROUPBOX        "",IDC_STATIC,7,7,470,386
+    LTEXT           "设备状态",IDC_STATIC,19,19,35,10
+    GROUPBOX        "硬盘状态",IDC_STATIC,15,235,455,137
+    GROUPBOX        "通道状态",IDC_STATIC,15,41,454,193
+    LTEXT           "0",IDC_STATIC_TOTAL_LINK,159,17,28,13,WS_BORDER
+    LTEXT           "总链接路数",IDC_STATIC,111,19,41,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Manage Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Manage\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Manage.EXE\0"
+            VALUE "ProductName", "Manage 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_MANAGE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 561
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 455
+    END
+
+    IDD_DIALOG_CHECK_TIME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_DIALOG_UPDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_DIALOG_FORMAT_HD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_DIALOG_LOG_SEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 479
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 396
+    END
+
+    IDD_DIALOG_DEVICE_STATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 485
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 398
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_UPDATE DLGINIT
+BEGIN
+    IDC_COMBO_ENVIRONMENT, 0x403, 4, 0
+0x414c, 0x004e, 
+    IDC_COMBO_ENVIRONMENT, 0x403, 4, 0
+0x4157, 0x004e, 
+    0
+END
+
+IDD_DIALOG_LOG_SEARCH DLGINIT
+BEGIN
+    IDC_COMBO_MODE, 0x403, 5, 0
+0xabc8, 0xbfb2, "\000" 
+    IDC_COMBO_MODE, 0x403, 7, 0
+0xb4b0, 0xe0c0, 0xcdd0, "\000" 
+    IDC_COMBO_MODE, 0x403, 7, 0
+0xb4b0, 0xb1ca, 0xe4bc, "\000" 
+    IDC_COMBO_MODE, 0x403, 12, 0
+0xb4b0, 0xe0c0, 0xcdd0, 0xca26, 0xbcb1, 0x00e4, 
+    IDC_COMBO_MAJOR_TYPE, 0x403, 5, 0
+0xabc8, 0xbfb2, "\000" 
+    IDC_COMBO_MAJOR_TYPE, 0x403, 5, 0
+0xa8b1, 0xafbe, "\000" 
+    IDC_COMBO_MAJOR_TYPE, 0x403, 5, 0
+0xecd2, 0xa3b3, "\000" 
+    IDC_COMBO_MAJOR_TYPE, 0x403, 5, 0
+0xd9b2, 0xf7d7, "\000" 
+    IDC_COMBO_MAJOR_TYPE, 0x403, 5, 0
+0xc5d0, 0xa2cf, "\000" 
+    IDC_COMBO_MINOR_TYPE, 0x403, 5, 0
+0xabc8, 0xbfb2, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Manage(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Manage.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

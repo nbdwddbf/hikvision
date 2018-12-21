@@ -1,0 +1,366 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PlayBack.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\PlayBack.ico"
+IDI_STOP_ENABLE         ICON    DISCARDABLE     "res\\STOP.ICO"
+IDI_STOP_DISABLE        ICON    DISCARDABLE     "res\\STOP_DISABLE.ICO"
+IDI_STEPBACK_ENABLE     ICON    DISCARDABLE     "res\\ico00010.ico"
+IDI_STEPBACK_DISABLE    ICON    DISCARDABLE     "res\\ico00011.ico"
+IDI_STEP_ENABLE         ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_STEP_DISABLE        ICON    DISCARDABLE     "res\\step_disable.ico"
+IDI_SOUND_ENABLE        ICON    DISCARDABLE     "res\\ico00008.ico"
+IDI_SOUND_DISABLE       ICON    DISCARDABLE     "res\\ico00009.ico"
+IDI_PLAY_ENABLE         ICON    DISCARDABLE     "res\\PLAY_ENABLE.ICO"
+IDI_PLAY_DISABLE        ICON    DISCARDABLE     "res\\PLAY_DISABLE.ICO"
+IDI_PIC                 ICON    DISCARDABLE     "res\\camera.ico"
+IDI_PAUSE_ENABLE        ICON    DISCARDABLE     "res\\PAUSE_ENABLE.ICO"
+IDI_PAUSE_DISABLE       ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_GOTOSTART_ENABLE    ICON    DISCARDABLE     "res\\ico00006.ico"
+IDI_GOTOSTART_DISABLE   ICON    DISCARDABLE     "res\\ico1.ico"
+IDI_GOTOEND_ENABLE      ICON    DISCARDABLE     "res\\ico00007.ico"
+IDI_GOTOEND_DISABLE     ICON    DISCARDABLE     "res\\ico00004.ico"
+IDI_FASTFORWARD_ENABLE  ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_FASTFORWARD_DISABLE ICON    DISCARDABLE     "res\\ico00003.ico"
+IDI_FASTBACKWARD_ENABLE ICON    DISCARDABLE     "res\\icon8.ico"
+IDI_FASTBACKWARD_DISABLE ICON    DISCARDABLE     "res\\ico00002.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 PlayBack"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "PlayBack 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PLAYBACK_DIALOG DIALOGEX 0, 0, 679, 468
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PlayBack"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tab1",IDC_TAB_PLAYBACK,"SysTabControl32",TCS_FIXEDWIDTH,
+                    91,39,581,400
+    CONTROL         "IPAddress1",IDC_IPADDRESS_DEV,"SysIPAddress32",
+                    WS_TABSTOP,85,17,73,13
+    EDITTEXT        IDC_EDIT_PORT,187,17,41,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,257,17,52,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PWD,353,17,45,13,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Login",IDC_BUTTON_LOGIN,418,17,33,19
+    LTEXT           "Dev IP",IDC_STATIC,59,20,25,8
+    LTEXT           "Port",IDC_STATIC,165,20,17,8
+    LTEXT           "User",IDC_STATIC,235,20,17,8
+    LTEXT           "Password",IDC_STATIC,315,20,33,8
+    CONTROL         "Tree1",IDC_TREE_CHAN,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,13,41,75,397
+END
+
+IDD_PAGE_REMOTE DIALOG DISCARDABLE  0, 0, 568, 381
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "录像类型",IDC_STATIC,19,27,36,8
+    COMBOBOX        IDC_COMBO_TYPE,60,25,58,57,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "开始时间",IDC_STATIC,145,27,33,8
+    LTEXT           "结束时间",IDC_STATIC,323,28,33,8
+    CONTROL         "DateTimePicker1",IDC_DATE_START,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,182,25,72,15
+    CONTROL         "DateTimePicker2",IDC_DATE_END,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,358,25,70,15
+    CONTROL         "DateTimePicker3",IDC_TIME_START,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,257,25,47,
+                    15
+    CONTROL         "DateTimePicker4",IDC_TIME_END,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,435,26,50,
+                    15
+    CONTROL         "List2",IDC_FILE_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,71,251,231
+    LTEXT           "文件属性",IDC_STATIC,17,46,33,8
+    COMBOBOX        IDC_COMBO_FILE_PROPERTY,60,45,56,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATIC_PLAY,262,71,297,231,SS_SUNKEN
+    PUSHBUTTON      "查找",IDC_BUTTON_SEARCH,38,305,38,14
+    PUSHBUTTON      "解锁",IDC_BUTTON_UNLOCK,98,305,39,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "下载",IDC_BUTTON_DOWNLOAD,160,306,37,14
+    CONTROL         "Progress1",IDC_PROGRESS_DOWNLOAD,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,13,343,226,9
+    PUSHBUTTON      "",IDC_BUTTON_REMOTE_PLAY,292,319,15,14,BS_ICON
+    CONTROL         "Slider1",IDC_SLIDER_PLAY,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,284,305,253,11
+    LTEXT           "",IDC_STATIC_SEARCH,7,320,103,14
+    PUSHBUTTON      "",IDC_BUTTON_REMOTE_STOP,308,319,15,14,BS_ICON
+    PUSHBUTTON      "",IDC_BUTTON_REMOTE_SLOW,339,319,15,14,BS_ICON
+    PUSHBUTTON      "",IDC_BUTTON_REMOTE_FAST,355,319,15,14,BS_ICON
+    PUSHBUTTON      "",IDC_BUTTON_REMOTE_BACK,384,319,15,14,BS_ICON
+    PUSHBUTTON      "",IDC_BUTTON_REMOTE_STEP,407,319,15,14,BS_ICON
+    LTEXT           "",IDC_STATIC_FRAME,289,347,52,12
+    PUSHBUTTON      "",IDC_BUTTON_REMOTE_PIC,437,319,15,14,BS_ICON
+    PUSHBUTTON      "",IDC_BUTTON_REMOTE_SOUND,469,319,15,14,BS_ICON
+    CONTROL         "Slider1",IDC_SLIDER_VOLUME,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,489,321,58,9
+    PUSHBUTTON      "保存",IDC_BUTTON_REMOTE_SAVE,420,351,41,14
+    PUSHBUTTON      "停止保存",IDC_BUTTON_REMOTE_STOP_SAVE,472,351,50,14
+END
+
+IDD_PAGE_TIME DIALOG DISCARDABLE  0, 0, 559, 378
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,14,14,468,50
+    LTEXT           "开始时间",IDC_STATIC,55,34,33,8
+    LTEXT           "结束时间",IDC_STATIC,269,35,33,8
+    CONTROL         "DateTimePicker1",IDC_DATE_START_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,92,32,72,15
+    CONTROL         "DateTimePicker2",IDC_DATE_END_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,304,32,70,15
+    CONTROL         "DateTimePicker3",IDC_TIME_START_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,167,32,47,
+                    15
+    CONTROL         "DateTimePicker4",IDC_TIME_END_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,381,33,50,
+                    15
+    LTEXT           "",IDC_STATIC_PLAY_WND_TIME,21,74,347,257,SS_SUNKEN
+    GROUPBOX        "",IDC_STATIC,15,65,467,300
+    PUSHBUTTON      "下载",IDC_BUTTON_DOWNLOAD,415,87,50,14
+    PUSHBUTTON      "保存",IDC_BUTTON_SAVE,415,109,50,14
+    PUSHBUTTON      "",IDC_BUTTON_PLAY_BYTIME,52,343,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_BUTTON_STOP_BYTIME,93,343,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_BUTTON_FAST_BYTIME,131,343,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_BUTTON_SLOW_BYTIME,168,343,16,14,BS_ICON
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "PlayBack Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "PlayBack\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PlayBack.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "PlayBack 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PLAYBACK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 672
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 461
+    END
+
+    IDD_PAGE_REMOTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 561
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 374
+    END
+
+    IDD_PAGE_TIME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 552
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 371
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PAGE_REMOTE DLGINIT
+BEGIN
+    IDC_COMBO_TYPE, 0x403, 5, 0
+0xabc8, 0xbfb2, "\000" 
+    IDC_COMBO_TYPE, 0x403, 9, 0
+0xa8b6, 0xb1ca, 0xbcc2, 0xf1cf, "\000" 
+    IDC_COMBO_TYPE, 0x403, 9, 0
+0xc6d2, 0xafb6, 0xecd5, 0xe2b2, "\000" 
+    IDC_COMBO_TYPE, 0x403, 9, 0
+0xa8b1, 0xafbe, 0xa5b4, 0xa2b7, "\000" 
+    IDC_COMBO_TYPE, 0x403, 9, 0
+0xfcc3, 0xeec1, 0xa5b4, 0xa2b7, "\000" 
+    IDC_COMBO_TYPE, 0x403, 14, 0
+0xa8b1, 0xafbe, 0xd27c, 0xb6c6, 0xd5af, 0xb2ec, 0x00e2, 
+    IDC_COMBO_TYPE, 0x403, 14, 0
+0xa8b1, 0xafbe, 0xd226, 0xb6c6, 0xd5af, 0xb2ec, 0x00e2, 
+    IDC_COMBO_TYPE, 0x403, 9, 0
+0xd6ca, 0xafb6, 0xbcc2, 0xf1cf, "\000" 
+    IDC_COMBO_FILE_PROPERTY, 0x403, 5, 0
+0xabc8, 0xbfb2, "\000" 
+    IDC_COMBO_FILE_PROPERTY, 0x403, 5, 0
+0xe2bd, 0xf8cb, "\000" 
+    IDC_COMBO_FILE_PROPERTY, 0x403, 5, 0
+0xf8cb, 0xa8b6, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 PlayBack(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\PlayBack.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

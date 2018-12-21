@@ -1,0 +1,8 @@
+C:\projects\CH-HCNetSDKV5.3.6.30_build20180816_Win64\Demo示例\3- C# 开发示例\4-报警布防监听\AlarmCSharpDemo\bin\AlarmCSharpDemo.exe.config
+C:\projects\CH-HCNetSDKV5.3.6.30_build20180816_Win64\Demo示例\3- C# 开发示例\4-报警布防监听\AlarmCSharpDemo\bin\AlarmCSharpDemo.exe
+C:\projects\CH-HCNetSDKV5.3.6.30_build20180816_Win64\Demo示例\3- C# 开发示例\4-报警布防监听\AlarmCSharpDemo\obj\x64\Release\AlarmCSharpDemo.csprojAssemblyReference.cache
+C:\projects\CH-HCNetSDKV5.3.6.30_build20180816_Win64\Demo示例\3- C# 开发示例\4-报警布防监听\AlarmCSharpDemo\obj\x64\Release\AlarmCSharpDemo.AlarmDemo.resources
+C:\projects\CH-HCNetSDKV5.3.6.30_build20180816_Win64\Demo示例\3- C# 开发示例\4-报警布防监听\AlarmCSharpDemo\obj\x64\Release\AlarmCSharpDemo.Properties.Resources.resources
+C:\projects\CH-HCNetSDKV5.3.6.30_build20180816_Win64\Demo示例\3- C# 开发示例\4-报警布防监听\AlarmCSharpDemo\obj\x64\Release\AlarmCSharpDemo.csproj.GenerateResource.cache
+C:\projects\CH-HCNetSDKV5.3.6.30_build20180816_Win64\Demo示例\3- C# 开发示例\4-报警布防监听\AlarmCSharpDemo\obj\x64\Release\AlarmCSharpDemo.csproj.CoreCompileInputs.cache
+C:\projects\CH-HCNetSDKV5.3.6.30_build20180816_Win64\Demo示例\3- C# 开发示例\4-报警布防监听\AlarmCSharpDemo\obj\x64\Release\AlarmCSharpDemo.exe

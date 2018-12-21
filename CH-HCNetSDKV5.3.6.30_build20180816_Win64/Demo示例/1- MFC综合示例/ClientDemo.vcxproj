@@ -1,0 +1,1851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{F586B8E3-302E-4160-B60A-BCE1E70F76A0}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <OutDir>../../库文件/</OutDir>
+    <TargetName>ClientDemo</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../库文件/</OutDir>
+    <TargetName>ClientDemo</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>./Include;../../头文件;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN64;NDEBUG;_WINDOWS;DEMO_LAN_CN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerOutput>All</AssemblerOutput>
+      <AssemblerListingLocation>VC60/</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\ReleaseVC60\ClientDemo.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ObjectFileName>VC60/</ObjectFileName>
+      <ProgramDataBaseFileName>VC60/</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\ReleaseVC60\ClientDemo.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <ResourceOutputFileName>Release/ClientDemo.res</ResourceOutputFileName>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>Release/ClientDemo.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetFileName)</OutputFile>
+      <AdditionalLibraryDirectories>../../库文件;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>HCNetSDK.lib;PlayCtrl.lib;ws2_32.lib;winmm.lib;GdiPlus.lib;IPHlpApi.Lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>./Include;../../头文件;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;DEMO_LAN_CN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>DVC60/ClientDemo.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>DVC60/</ObjectFileName>
+      <ProgramDataBaseFileName>DVC60/</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\ClientDemo.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\ClientDemo.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetFileName)</OutputFile>
+      <AdditionalLibraryDirectories>../../库文件;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GdiPlus.lib;HCNetSDK.lib;PlayCtrl.lib;ws2_32.lib;winmm.lib;IPHlpApi.Lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="B10SeriesConfig.cpp" />
+    <ClCompile Include="CheckEnabled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cjson\cjson.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ClientDemo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="ClientDemoDlg.cpp" />
+    <ClCompile Include="ConvertC10S21Param.cpp" />
+    <ClCompile Include="curl_httpclient.cpp" />
+    <ClCompile Include="DecoderCfg.cpp" />
+    <ClCompile Include="DeviceCfgFile.cpp" />
+    <ClCompile Include="DeviceDlg.cpp" />
+    <ClCompile Include="DialogMultiNetCard.cpp" />
+    <ClCompile Include="DialogRecordTimeSpan.cpp" />
+    <ClCompile Include="Dlg67DVSCfg.cpp" />
+    <ClCompile Include="DlgAbilityAutoDetect.cpp" />
+    <ClCompile Include="DlgAbnormalInfo.cpp" />
+    <ClCompile Include="DlgACAlarmInOutCfg.cpp" />
+    <ClCompile Include="DlgACCardParam.cpp" />
+    <ClCompile Include="DlgAccessCameraCfg.cpp" />
+    <ClCompile Include="DlgAccessoryCardInfo.cpp" />
+    <ClCompile Include="DlgAcsAttendance.cpp" />
+    <ClCompile Include="DlgAcsCardPasswdCfg.cpp" />
+    <ClCompile Include="DlgAcsCardPasswdParam.cpp" />
+    <ClCompile Include="DlgAcsCardUserInfoCfg.cpp" />
+    <ClCompile Include="DlgAcsCaseSensor.cpp" />
+    <ClCompile Include="DlgAcsCfg.cpp" />
+    <ClCompile Include="DlgAcsCheckFacePicture.cpp" />
+    <ClCompile Include="DlgAcsExternalDevCfg.cpp" />
+    <ClCompile Include="DlgAcsFaceAndTemplate.cpp" />
+    <ClCompile Include="DlgAcsFaceParamCfg.cpp" />
+    <ClCompile Include="DlgAcsFingerPrintCfg.cpp" />
+    <ClCompile Include="DlgACSGateTimeCFG.cpp" />
+    <ClCompile Include="DlgAcsLocalControllerCfg.cpp" />
+    <ClCompile Include="DlgAcsLocalControllerStatus.cpp" />
+    <ClCompile Include="DlgAcsLogSearch.cpp" />
+    <ClCompile Include="DlgAcsMoudleStatus.cpp" />
+    <ClCompile Include="DlgAcsOnlineLocalControllerCfg.cpp" />
+    <ClCompile Include="DlgAcsPersonnelChannelCfg.cpp" />
+    <ClCompile Include="DlgAcsPhoneDoorRightCfg.cpp" />
+    <ClCompile Include="DlgAcsSearchExamCompareResult.cpp" />
+    <ClCompile Include="DlgAcsSetExamineeInfo.cpp" />
+    <ClCompile Include="DlgAcsSetExamInfo.cpp" />
+    <ClCompile Include="DlgAcsSmsCfg.cpp" />
+    <ClCompile Include="DlgAcsSnapCfg.cpp" />
+    <ClCompile Include="DlgAcsUSBDeviceManage.cpp" />
+    <ClCompile Include="DlgAcsWorkStatus.cpp" />
+    <ClCompile Include="DlgAcsXmlDiffusion.cpp" />
+    <ClCompile Include="DlgAddDevice.cpp" />
+    <ClCompile Include="DlgAES.cpp" />
+    <ClCompile Include="DlgAlarmCamCfg.cpp" />
+    <ClCompile Include="DlgAlarmCenterNetCfg.cpp" />
+    <ClCompile Include="DlgAlarmCenterServerCfg.cpp" />
+    <ClCompile Include="DlgAlarmChanAblitity.cpp" />
+    <ClCompile Include="DlgAlarmExceptionHandle.cpp" />
+    <ClCompile Include="DlgAlarmHost.cpp" />
+    <ClCompile Include="DlgAlarmHostAbility.cpp" />
+    <ClCompile Include="DlgAlarmHostAudioAssociateAlarm.cpp" />
+    <ClCompile Include="DlgAlarmhostDataUploadMode.cpp" />
+    <ClCompile Include="DlgAlarmHostDialParam.cpp" />
+    <ClCompile Include="DlgAlarmHostDong.cpp" />
+    <ClCompile Include="DlgAlarmHostEnableCfg.cpp" />
+    <ClCompile Include="DlgAlarmHostEventTrigger.cpp" />
+    <ClCompile Include="DlgAlarmhostExternalDevLimitValue.cpp" />
+    <ClCompile Include="DlgAlarmHostExternalDevState.cpp" />
+    <ClCompile Include="DlgAlarmHostExternalModule.cpp" />
+    <ClCompile Include="DlgAlarmHostFaultProcess.cpp" />
+    <ClCompile Include="DlgAlarmHostGetAllModule.cpp" />
+    <ClCompile Include="DlgAlarmHostGPRS.cpp" />
+    <ClCompile Include="DlgAlarmhostHistoryData.cpp" />
+    <ClCompile Include="DlgAlarmHostLED.cpp" />
+    <ClCompile Include="DlgAlarmHostLEDBrightness.cpp" />
+    <ClCompile Include="DlgAlarmHostLogSearch.cpp" />
+    <ClCompile Include="DlgAlarmhostModuleCfg.cpp" />
+    <ClCompile Include="DlgAlarmHostNetCfg.cpp" />
+    <ClCompile Include="DlgAlarmhostPointCfg.cpp" />
+    <ClCompile Include="DlgAlarmHostPrinter.cpp" />
+    <ClCompile Include="DlgAlarmHostReportMode.cpp" />
+    <ClCompile Include="DlgAlarmHostRs485.cpp" />
+    <ClCompile Include="DlgAlarmhostSensorLinkage.cpp" />
+    <ClCompile Include="DlgAlarmHostStatus.cpp" />
+    <ClCompile Include="DlgAlarmhostSTDXMLConfig.cpp" />
+    <ClCompile Include="DlgAlarmhostSubsystem.cpp" />
+    <ClCompile Include="DlgAlarmHostTransparent.cpp" />
+    <ClCompile Include="DlgAlarmHostTriggerCode.cpp" />
+    <ClCompile Include="DlgAlarmHostZoneCfg.cpp" />
+    <ClCompile Include="DlgAlarmHostZoomAddr.cpp" />
+    <ClCompile Include="DlgAlarmInfo.cpp" />
+    <ClCompile Include="DlgAlarmKeyboardUser.cpp" />
+    <ClCompile Include="DlgAlarmNetUser.cpp" />
+    <ClCompile Include="DlgAlarmOneKey.cpp" />
+    <ClCompile Include="DlgAlarmOperatorUser.cpp" />
+    <ClCompile Include="DlgAlarmOutCfg.cpp" />
+    <ClCompile Include="DlgAlarmPicCfg.cpp" />
+    <ClCompile Include="DlgAlarmTamper.cpp" />
+    <ClCompile Include="DlgAntiSneakHostCfg.cpp" />
+    <ClCompile Include="DlgAreaMaskCfg.cpp" />
+    <ClCompile Include="DlgAreaMonitorCfg.cpp" />
+    <ClCompile Include="DlgArmingHost.cpp" />
+    <ClCompile Include="DlgAsynloginWait.cpp" />
+    <ClCompile Include="DlgAtmFrameFormatV30.cpp" />
+    <ClCompile Include="DlgAttendanceHolidayGroup.cpp" />
+    <ClCompile Include="DlgAttendanceHolidayPlan.cpp" />
+    <ClCompile Include="DlgAttendanceRecordInfo.cpp" />
+    <ClCompile Include="DlgAttendanceRule.cpp" />
+    <ClCompile Include="DlgAttendanceSummaryInfo.cpp" />
+    <ClCompile Include="DlgAudioChanCfg.cpp" />
+    <ClCompile Include="DlgAudioDiacriticalCfg.cpp" />
+    <ClCompile Include="DlgAudioInVolumeCfg1.cpp" />
+    <ClCompile Include="DlgAudioOutVolumeCfg.cpp" />
+    <ClCompile Include="DlgAudioUploadDownload.cpp" />
+    <ClCompile Include="DlgAutoReboot.cpp" />
+    <ClCompile Include="DlgAutoUpgrade.cpp" />
+    <ClCompile Include="DlgBatchConfig.cpp" />
+    <ClCompile Include="DlgBatchUploadBlackList.cpp" />
+    <ClCompile Include="DlgBathcUserRightCfg.cpp" />
+    <ClCompile Include="DlgBatteryPower.cpp" />
+    <ClCompile Include="DlgBellFileCfg.cpp" />
+    <ClCompile Include="DlgBroadCast.cpp" />
+    <ClCompile Include="DlgBuiltinSupplementLight.cpp" />
+    <ClCompile Include="DlgBvCalibParamCfg.cpp" />
+    <ClCompile Include="DlgC10S21Config.cpp" />
+    <ClCompile Include="DlgCameraSetupCfg.cpp" />
+    <ClCompile Include="DlgCaptureFace.cpp" />
+    <ClCompile Include="DlgCaptureFingerPrint.cpp" />
+    <ClCompile Include="DlgCapturePictureV50.cpp" />
+    <ClCompile Include="DlgCardReaderCfg.cpp" />
+    <ClCompile Include="DlgCaseInfo.cpp" />
+    <ClCompile Include="DlgCcdParam.cpp" />
+    <ClCompile Include="DlgCenterPoint.cpp" />
+    <ClCompile Include="DlgCertInfo.cpp" />
+    <ClCompile Include="DLGCfgSecuFile.cpp" />
+    <ClCompile Include="DlgChanInputAbility.cpp" />
+    <ClCompile Include="DlgChannelInfo.cpp" />
+    <ClCompile Include="DlgCheckTime.cpp" />
+    <ClCompile Include="DlgClearAcsParam.cpp" />
+    <ClCompile Include="DlgCloudCfg.cpp" />
+    <ClCompile Include="DlgCloudManage.cpp" />
+    <ClCompile Include="DlgCloudStorage.cpp" />
+    <ClCompile Include="DlgCloudStorageCfg.cpp" />
+    <ClCompile Include="DlgCloudStoragePhoneTest.cpp" />
+    <ClCompile Include="DlgCloudUploadstrategyCfg.cpp" />
+    <ClCompile Include="DlgCloudUrlCfg.cpp" />
+    <ClCompile Include="DlgCluster.cpp" />
+    <ClCompile Include="DlgCMSParam.cpp" />
+    <ClCompile Include="DlgCodeSplitter.cpp" />
+    <ClCompile Include="DlgCommuSecurity.cpp" />
+    <ClCompile Include="DlgCompressionV30.cpp" />
+    <ClCompile Include="DlgConferenceParam.cpp" />
+    <ClCompile Include="DlgConferenceRegion.cpp" />
+    <ClCompile Include="DlgConfigAll.cpp" />
+    <ClCompile Include="DlgConfigFlash.cpp" />
+    <ClCompile Include="DlgConnectList.cpp" />
+    <ClCompile Include="DlgCourseCfg.cpp" />
+    <ClCompile Include="DlgCourseInfo.cpp" />
+    <ClCompile Include="DlgCourseList.cpp" />
+    <ClCompile Include="DlgCreateVD.cpp" />
+    <ClCompile Include="DLGCreateWall.cpp" />
+    <ClCompile Include="DlgCuntomProtocal.cpp" />
+    <ClCompile Include="DlgCurrentEncodeAbility.cpp" />
+    <ClCompile Include="DlgCVR.cpp" />
+    <ClCompile Include="DlgCVRDataManage.cpp" />
+    <ClCompile Include="DlgCVRPassbackBasicCfg.cpp" />
+    <ClCompile Include="DlgCVRPreviewByStreamID.cpp" />
+    <ClCompile Include="DlgCVRRemoteBackup.cpp" />
+    <ClCompile Include="DlgCVRResourceIPCfg.cpp" />
+    <ClCompile Include="DlgDebug.cpp" />
+    <ClCompile Include="DlgDecoderAbility.cpp" />
+    <ClCompile Include="DlgDecoderControl.cpp" />
+    <ClCompile Include="DlgDecorder.cpp" />
+    <ClCompile Include="DlgDecWinStatus.cpp" />
+    <ClCompile Include="DlgDecWinStatusUniform.cpp" />
+    <ClCompile Include="DlgDelayPreviewCfg.cpp" />
+    <ClCompile Include="DlgDepartmentParam.cpp" />
+    <ClCompile Include="DlgDetectorRegister.cpp" />
+    <ClCompile Include="DlgDeviceAudioTalkCode.cpp" />
+    <ClCompile Include="DlgDeviceInfo.cpp" />
+    <ClCompile Include="DlgDeviceLanguageEncode.cpp" />
+    <ClCompile Include="DlgDeviceSelfCheckState.cpp" />
+    <ClCompile Include="DlgDeviceState.cpp" />
+    <ClCompile Include="DlgDevServer.cpp" />
+    <ClCompile Include="DlgDevStorageInfo.cpp" />
+    <ClCompile Include="DlgDevWorkMode.cpp" />
+    <ClCompile Include="DlgDH3.cpp" />
+    <ClCompile Include="DlgDiagnosticServer.cpp" />
+    <ClCompile Include="DlgDiskQuota.cpp" />
+    <ClCompile Include="DlgDoorConfig.cpp" />
+    <ClCompile Include="DlgDoTest.cpp" />
+    <ClCompile Include="DlgDPCCfg.cpp" />
+    <ClCompile Include="DlgDyanmicPic.cpp" />
+    <ClCompile Include="DlgDynChanAbility.cpp" />
+    <ClCompile Include="DlgEagleCfg.cpp" />
+    <ClCompile Include="DlgEagleEyeCfg.cpp" />
+    <ClCompile Include="DlgEctChanStatus.cpp" />
+    <ClCompile Include="DlgEctWorkState.cpp" />
+    <ClCompile Include="DlgEncodeAbility.cpp" />
+    <ClCompile Include="DlgEncodeJoint.cpp" />
+    <ClCompile Include="DlgEncryptCert.cpp" />
+    <ClCompile Include="DlgESataMiniSasUsage.cpp" />
+    <ClCompile Include="DlgEthernetIpv6Cfg.cpp" />
+    <ClCompile Include="DlgEventCardLinkageCfg.cpp" />
+    <ClCompile Include="DlgExternalDev.cpp" />
+    <ClCompile Include="DlgEZVIZAccessCfg.cpp" />
+    <ClCompile Include="DlgEzvizLogin.cpp" />
+    <ClCompile Include="DlgFaceData.cpp" />
+    <ClCompile Include="DlgFacelibSearch.cpp" />
+    <ClCompile Include="DlgFiberRingCfg.cpp" />
+    <ClCompile Include="DlgFibreDev.cpp" />
+    <ClCompile Include="DlgFireDetection.cpp" />
+    <ClCompile Include="DLGFIREPTZEXCFG.cpp" />
+    <ClCompile Include="DlgFirmWareversion.cpp" />
+    <ClCompile Include="DlgFishEye.cpp" />
+    <ClCompile Include="DlgFisheyeCorrect.cpp" />
+    <ClCompile Include="DlgFisheyeFECWnd.cpp" />
+    <ClCompile Include="DlgFishEyePtzControl.cpp" />
+    <ClCompile Include="DlgFisheyePtzPlayWnd.cpp" />
+    <ClCompile Include="DlgFisheyeTrackCfg.cpp" />
+    <ClCompile Include="DlgFormatHD.cpp" />
+    <ClCompile Include="DlgFortify.cpp" />
+    <ClCompile Include="DlgFrameCtrl.cpp" />
+    <ClCompile Include="DlgFTPUpload.cpp" />
+    <ClCompile Include="DlgGatewayCardCfg.cpp" />
+    <ClCompile Include="DlgGatewayCardInfo.cpp" />
+    <ClCompile Include="DlgGatewayCfg.cpp" />
+    <ClCompile Include="DlgGB28181ServerCfg.cpp" />
+    <ClCompile Include="DlgGBT28181ProAccessUniform.cpp" />
+    <ClCompile Include="DlgGBT28181ProtocolAccess.cpp" />
+    <ClCompile Include="DlgGetAccessDeviceChannelInfo.cpp" />
+    <ClCompile Include="DlgGetAllPointCfg.cpp" />
+    <ClCompile Include="DlgGetAllRs485Cfg.cpp" />
+    <ClCompile Include="DlgGetAllRs485Slot.cpp" />
+    <ClCompile Include="DlgGetAllSensor.cpp" />
+    <ClCompile Include="DLGGetChannelInfo.cpp" />
+    <ClCompile Include="DlgGetDigitalChannelStatus.cpp" />
+    <ClCompile Include="DlgGetRegisterInfo.cpp" />
+    <ClCompile Include="DlgGetWifiClientListInfo.cpp" />
+    <ClCompile Include="DlgGISInfo.cpp" />
+    <ClCompile Include="DlgGKServer.cpp" />
+    <ClCompile Include="DlgGopInfo.cpp" />
+    <ClCompile Include="DlgGroupCfg.cpp" />
+    <ClCompile Include="DlgHardDiskCfg.cpp" />
+    <ClCompile Include="DlgHardDiskStorageTest.cpp" />
+    <ClCompile Include="DlgHardDiskVolumeInfo.cpp" />
+    <ClCompile Include="DlgHeatMapCfg.cpp" />
+    <ClCompile Include="DlgHiddenInfo.cpp" />
+    <ClCompile Include="DlgHolidayCfg.cpp" />
+    <ClCompile Include="DlgIDSMainBoard.cpp" />
+    <ClCompile Include="DlgImageDiffDetectionCfg.cpp" />
+    <ClCompile Include="DlgImExportIPCCfgFile.cpp" />
+    <ClCompile Include="DlgInChanVideoLostCfg.cpp" />
+    <ClCompile Include="DlgInfoDiffusionCapabilites.cpp" />
+    <ClCompile Include="DlgInfoDiffusionClock.cpp" />
+    <ClCompile Include="DlgInfoDiffusionClockWeather.cpp" />
+    <ClCompile Include="DlgInfoDiffusionContainer.cpp" />
+    <ClCompile Include="DlgInfoDiffusionContent.cpp" />
+    <ClCompile Include="DlgInfoDiffusionMaterial.cpp" />
+    <ClCompile Include="DlgInfoDiffusionPlay.cpp" />
+    <ClCompile Include="DlgInfoDiffusionProgram.cpp" />
+    <ClCompile Include="DlgInfoDiffusionRelease.cpp" />
+    <ClCompile Include="DlgInfoDiffusionSchedule.cpp" />
+    <ClCompile Include="DlgInfoDiffusionScheduleSearch.cpp" />
+    <ClCompile Include="DlgInfoDiffusionScheduleSelfdefine.cpp" />
+    <ClCompile Include="DlgInfoDiffusionServer.cpp" />
+    <ClCompile Include="DlgInfoDiffusionShutdown.cpp" />
+    <ClCompile Include="DlgInfoDiffusionTermainlServer.cpp" />
+    <ClCompile Include="DlgInfoDiffusionTerminal.cpp" />
+    <ClCompile Include="DlgInfoDiffusionTerminalUpgrade.cpp" />
+    <ClCompile Include="DlgInfoDiffusionTernimalPreview.cpp" />
+    <ClCompile Include="DlgInfoDiffusionVolum.cpp" />
+    <ClCompile Include="DlgInfoDiffusionXmlCfg.cpp" />
+    <ClCompile Include="DlgInfoDiffusionXmlUpdownload.cpp" />
+    <ClCompile Include="DlgInfoGerenal.cpp" />
+    <ClCompile Include="DlgInfoXmlCfgWithUrl.cpp" />
+    <ClCompile Include="DlgInfrareCfg.cpp" />
+    <ClCompile Include="DlgInfrared.cpp" />
+    <ClCompile Include="DlgInqMixAudioInCfg.cpp" />
+    <ClCompile Include="DlgInquestCaseInfo.cpp" />
+    <ClCompile Include="DlgInquestDvr.cpp" />
+    <ClCompile Include="DlgInquestEvent.cpp" />
+    <ClCompile Include="DlgInquestFile.cpp" />
+    <ClCompile Include="DlgInquestTrayConfig.cpp" />
+    <ClCompile Include="DlgInqUserRight.cpp" />
+    <ClCompile Include="DlgInteractive.cpp" />
+    <ClCompile Include="DlgInteractiveControl.cpp" />
+    <ClCompile Include="DlgInteractiveFileInfoCfg.cpp" />
+    <ClCompile Include="DlgInteractiveScreenConfig.cpp" />
+    <ClCompile Include="DlgInteractiveScreenFileUpload.cpp" />
+    <ClCompile Include="DlgIOOutCfg.cpp" />
+    <ClCompile Include="DlgIPAccessCfgDDNS.cpp" />
+    <ClCompile Include="DlgIPAccessCfgEasyDDNS.cpp" />
+    <ClCompile Include="DlgIPAccessCfgIPServer.cpp" />
+    <ClCompile Include="DlgIPAccessCfgStreamServer.cpp" />
+    <ClCompile Include="DlgIPAddrFilterCfg.cpp" />
+    <ClCompile Include="DlgIPCFrontAbility.cpp" />
+    <ClCompile Include="DlgIPCPlateRecog.cpp" />
+    <ClCompile Include="DlgIPCSimpIntellCfg.cpp" />
+    <ClCompile Include="DlgIPCSpecial.cpp" />
+    <ClCompile Include="DlgIPCSpeclalEx.cpp" />
+    <ClCompile Include="DlgIPDomeLocalCfg.cpp" />
+    <ClCompile Include="DlgIperf.cpp" />
+    <ClCompile Include="DlgIpViewCfg.cpp" />
+    <ClCompile Include="DlgIscsiCfg.cpp" />
+    <ClCompile Include="DlgISPParamCfg.cpp" />
+    <ClCompile Include="DlgITCAblity.cpp" />
+    <ClCompile Include="DlgITCIOinCfg.cpp" />
+    <ClCompile Include="DlgITSBaseInfo.cpp" />
+    <ClCompile Include="DlgITSConfig.cpp" />
+    <ClCompile Include="DlgITSImageMergeCfg.cpp" />
+    <ClCompile Include="DlgITSIOinCfg.cpp" />
+    <ClCompile Include="DlgITSIpcCfg.cpp" />
+    <ClCompile Include="DlgITSMiniPost.cpp" />
+    <ClCompile Include="DlgITSMonitor.cpp" />
+    <ClCompile Include="DlgITSOverlapCfg.cpp" />
+    <ClCompile Include="DlgITSRoadInfo.cpp" />
+    <ClCompile Include="DlgITSUpload.cpp" />
+    <ClCompile Include="DlgITSWorkState.cpp" />
+    <ClCompile Include="DlgJpegCaptureCfg.cpp" />
+    <ClCompile Include="DlgJpegFTP.cpp" />
+    <ClCompile Include="DlgJPEGPicDownloadMedical.cpp" />
+    <ClCompile Include="DlgJPEGSnatchConfig.cpp" />
+    <ClCompile Include="DlgKeyboardCfg.cpp" />
+    <ClCompile Include="DlgLampCfg.cpp" />
+    <ClCompile Include="DlgLampControl.cpp" />
+    <ClCompile Include="DlgLcdMatrixRelation.cpp" />
+    <ClCompile Include="DlgLcdMatrixSwitch.cpp" />
+    <ClCompile Include="DlgLcdParamCfg.cpp" />
+    <ClCompile Include="DlgLcdScene.cpp" />
+    <ClCompile Include="DlgLCDScreen.cpp" />
+    <ClCompile Include="DlgLCDScreenDisplay.cpp" />
+    <ClCompile Include="DlgLcdSerial.cpp" />
+    <ClCompile Include="DlgLcdServer.cpp" />
+    <ClCompile Include="DlgLcdSplice.cpp" />
+    <ClCompile Include="DlgLcdSwitchCfg.cpp" />
+    <ClCompile Include="DlgLcdUserCfg.cpp" />
+    <ClCompile Include="DlgLEDCheckCond.cpp" />
+    <ClCompile Include="DlgLedConfig.cpp" />
+    <ClCompile Include="DlgLedConfigDisplay.cpp" />
+    <ClCompile Include="DlgLedConfigRecv.cpp" />
+    <ClCompile Include="DlgLEDTimerSwitch.cpp" />
+    <ClCompile Include="DlgLEDVersion.cpp" />
+    <ClCompile Include="DlgLimitAngle.cpp" />
+    <ClCompile Include="DlgLinkStatus.cpp" />
+    <ClCompile Include="DlgLiteStorage.cpp" />
+    <ClCompile Include="DlgLocalConfig.cpp" />
+    <ClCompile Include="DlgLocalInputInfo.cpp" />
+    <ClCompile Include="DlgLocalLogConfig.cpp" />
+    <ClCompile Include="DlgLocalRecordSchedule.cpp" />
+    <ClCompile Include="DlgLockedInfo.cpp" />
+    <ClCompile Include="DlgLogSearch.cpp" />
+    <ClCompile Include="DlgMacFilter.cpp" />
+    <ClCompile Include="DlgManualSnap.cpp" />
+    <ClCompile Include="DlgManualThermCfg.cpp" />
+    <ClCompile Include="DlgMasterSlaveTracking.cpp" />
+    <ClCompile Include="DlgMatDecBigScrSplice.cpp" />
+    <ClCompile Include="DlgMatDecodeChanJoint.cpp" />
+    <ClCompile Include="DlgMatOutputCfg.cpp" />
+    <ClCompile Include="DlgMatUnitedSystem.cpp" />
+    <ClCompile Include="DlgMCUAbilityDetect.cpp" />
+    <ClCompile Include="DlgMCUAddConference.cpp" />
+    <ClCompile Include="DlgMCUCall.cpp" />
+    <ClCompile Include="DlgMCUClearConfHistory.cpp" />
+    <ClCompile Include="DlgMCUConferenceCtrl.cpp" />
+    <ClCompile Include="DlgMCUDelConference.cpp" />
+    <ClCompile Include="DlgMCUGetConfStatus.cpp" />
+    <ClCompile Include="DlgMCUGetDailyDistribution.cpp" />
+    <ClCompile Include="DlgMCUGetTermGroupList.cpp" />
+    <ClCompile Include="DlgMCUSearchConference.cpp" />
+    <ClCompile Include="DlgMCUTerminalCtrl.cpp" />
+    <ClCompile Include="DlgMCUTerminalGroupCfg.cpp" />
+    <ClCompile Include="DlgMCUTerminalManageCfg.cpp" />
+    <ClCompile Include="DlgMergeDecOsd.cpp" />
+    <ClCompile Include="DlgMergeDev.cpp" />
+    <ClCompile Include="DlgMergeDevPic.cpp" />
+    <ClCompile Include="DlgMergeDevResource.cpp" />
+    <ClCompile Include="DlgMicrophoneStatus.cpp" />
+    <ClCompile Include="DlgMixAudioInCfg.cpp" />
+    <ClCompile Include="DlgMixAudioOutCfg.cpp" />
+    <ClCompile Include="DlgMobileTriggerCfg.cpp" />
+    <ClCompile Include="DlgModifyRecord.cpp" />
+    <ClCompile Include="DlgMonitorInfo.cpp" />
+    <ClCompile Include="DlgMonitorLocation.cpp" />
+    <ClCompile Include="DlgMouseEvent.cpp" />
+    <ClCompile Include="DlgMultiCardCfg.cpp" />
+    <ClCompile Include="DlgMultilStreamRelChanCfg.cpp" />
+    <ClCompile Include="DlgNetraEventVedio.cpp" />
+    <ClCompile Include="DlgNetraHttps.cpp" />
+    <ClCompile Include="DlgNetraRecordPackage.cpp" />
+    <ClCompile Include="DlgNetraSeries.cpp" />
+    <ClCompile Include="DlgNetServiceCfg.cpp" />
+    <ClCompile Include="DlgNetworkAbility.cpp" />
+    <ClCompile Include="DlgNetworkBonding.cpp" />
+    <ClCompile Include="DlgNetworkFlowTest.cpp" />
+    <ClCompile Include="DlgNVRCfg.cpp" />
+    <ClCompile Include="DlgNVRIPCCfg.cpp" />
+    <ClCompile Include="DlgOISCfg.cpp" />
+    <ClCompile Include="DlgOneKeyBackupCfg.cpp" />
+    <ClCompile Include="DlgOneKeyPublish.cpp" />
+    <ClCompile Include="DlgOneOutputScheduleRuleCfg.cpp" />
+    <ClCompile Include="DlgOnlineUserList.cpp" />
+    <ClCompile Include="DlgOrdinaryClass.cpp" />
+    <ClCompile Include="DlgOutput.cpp" />
+    <ClCompile Include="DlgOutputCtrl.cpp" />
+    <ClCompile Include="DlgOutputScheduleRuleCfg.cpp" />
+    <ClCompile Include="DlgPanoramaImage.cpp" />
+    <ClCompile Include="DlgPassiveTransCode.cpp" />
+    <ClCompile Include="DlgPassiveWin.cpp" />
+    <ClCompile Include="DlgPdcCalibration.cpp" />
+    <ClCompile Include="DlgPdcResult.cpp" />
+    <ClCompile Include="DlgPdcRuleCfg.cpp" />
+    <ClCompile Include="DlgPdcRuleCfgEx.cpp" />
+    <ClCompile Include="DlgPDCSearch.cpp" />
+    <ClCompile Include="DlgPersonnelStatis.cpp" />
+    <ClCompile Include="DlgPicBatchUpload.cpp" />
+    <ClCompile Include="DlgPicModelCfg.cpp" />
+    <ClCompile Include="DlgPictureSwitchCtrl.cpp" />
+    <ClCompile Include="DlgPictureUpload.cpp" />
+    <ClCompile Include="DlgPlayBack.cpp" />
+    <ClCompile Include="DlgPlayConvert.cpp" />
+    <ClCompile Include="DlgPlayDvrRecord.cpp" />
+    <ClCompile Include="DlgPlayEvent.cpp" />
+    <ClCompile Include="DlgPlayLocalFile.cpp" />
+    <ClCompile Include="DlgPlayLockFile.cpp" />
+    <ClCompile Include="DlgPlayMotion.cpp" />
+    <ClCompile Include="DlgPlayRemoteFile.cpp" />
+    <ClCompile Include="DlgPlayRemoteFileMedical.cpp" />
+    <ClCompile Include="DlgPlayRemoteTime.cpp" />
+    <ClCompile Include="DlgPosChanFilter.cpp" />
+    <ClCompile Include="DlgPosConnectMode.cpp" />
+    <ClCompile Include="DlgPosFilterEffect.cpp" />
+    <ClCompile Include="DlgPosFilterRule.cpp" />
+    <ClCompile Include="DlgPosInfoctrl.cpp" />
+    <ClCompile Include="DlgPositionTrackCfg.cpp" />
+    <ClCompile Include="DlgPosManage.cpp" />
+    <ClCompile Include="DlgPosRecvData.cpp" />
+    <ClCompile Include="DlgPOSRegion.cpp" />
+    <ClCompile Include="DlgPosSerialPortRecvData.cpp" />
+    <ClCompile Include="DlgPostRadarCfg.cpp" />
+    <ClCompile Include="DlgPPPCfg.cpp" />
+    <ClCompile Include="DlgPPTDetect.cpp" />
+    <ClCompile Include="DlgPreviewSwitchCfg.cpp" />
+    <ClCompile Include="DlgPreviewWin.cpp" />
+    <ClCompile Include="DlgPrivateProtocolCfg.cpp" />
+    <ClCompile Include="DlgProductAcs.cpp" />
+    <ClCompile Include="DlgProductAlarmHostCfg.cpp" />
+    <ClCompile Include="DlgProductCfg.cpp" />
+    <ClCompile Include="DlgProductDH.cpp" />
+    <ClCompile Include="DlgProductionTest.cpp" />
+    <ClCompile Include="DlgProductVcaCfg.cpp" />
+    <ClCompile Include="DlgPtzCfgCtrl.cpp" />
+    <ClCompile Include="DlgPTZCruise.cpp" />
+    <ClCompile Include="DlgPtzCtrl.cpp" />
+    <ClCompile Include="DlgPtzLockCfg.cpp" />
+    <ClCompile Include="DlgPtzNotification.cpp" />
+    <ClCompile Include="DlgPtzParkActionCfg.cpp" />
+    <ClCompile Include="DlgPTZPreset.cpp" />
+    <ClCompile Include="DlgPtzScope.cpp" />
+    <ClCompile Include="DlgPTZTasks.cpp" />
+    <ClCompile Include="DlgPtzTrackParamCfg.cpp" />
+    <ClCompile Include="DlgPUStream.cpp" />
+    <ClCompile Include="DlgQuickAddIpc.cpp" />
+    <ClCompile Include="DlgRaidConfig.cpp" />
+    <ClCompile Include="DlgReaderAntiSneakHostCfg.cpp" />
+    <ClCompile Include="DlgRecordAbility.cpp" />
+    <ClCompile Include="DlgRecordControl.cpp" />
+    <ClCompile Include="DlgRecordHost.cpp" />
+    <ClCompile Include="DlgRecordHostAbility.cpp" />
+    <ClCompile Include="DlgRecordHostAudioEffectiveCfg.cpp" />
+    <ClCompile Include="DlgRecordHostBackgroundPicCfg.cpp" />
+    <ClCompile Include="DlgRecordHostCfg.cpp" />
+    <ClCompile Include="DlgRecordHostClassDataStatistic.cpp" />
+    <ClCompile Include="DlgRecordHostDirectedAdvanceCfg.cpp" />
+    <ClCompile Include="DlgRecordHostDirectedStrategyCfg.cpp" />
+    <ClCompile Include="DlgRecordHostEducationServerCfg.cpp" />
+    <ClCompile Include="DlgRecordHostEndTime.cpp" />
+    <ClCompile Include="DlgRecordHostFilePublish.cpp" />
+    <ClCompile Include="DlgRecordHostFilmModeCfg.cpp" />
+    <ClCompile Include="DlgRecordHostFrameCfg.cpp" />
+    <ClCompile Include="DlgRecordHostRTMPCfg.cpp" />
+    <ClCompile Include="DlgRecordHostV120.cpp" />
+    <ClCompile Include="DlgRecordHostVedioSwitchConfig.cpp" />
+    <ClCompile Include="DlgRecordHostVideoCfg.cpp" />
+    <ClCompile Include="DlgRecordHostVideoTitleConfig.cpp" />
+    <ClCompile Include="DlgRecordLabel.cpp" />
+    <ClCompile Include="DlgRecordPublishCfg.cpp" />
+    <ClCompile Include="DlgRecordStatus.cpp" />
+    <ClCompile Include="DlgRecordStreamTransType.cpp" />
+    <ClCompile Include="DlgRecPassBack.cpp" />
+    <ClCompile Include="DlgRecPassBackHistorySchdule.cpp" />
+    <ClCompile Include="DlgRecPassBackScheCfg.cpp" />
+    <ClCompile Include="DlgRecPassbackTaskExecutable.cpp" />
+    <ClCompile Include="DlgRegionDetectCfg.cpp" />
+    <ClCompile Include="DlgRegionList.cpp" />
+    <ClCompile Include="DlgRemoteAdvanceNetConfig.cpp" />
+    <ClCompile Include="DlgRemoteAlarmDetectFace.cpp" />
+    <ClCompile Include="DlgRemoteAlarmInHandle.cpp" />
+    <ClCompile Include="DlgRemoteAlarmInPtzInvoke.cpp" />
+    <ClCompile Include="DlgRemoteCfg.cpp" />
+    <ClCompile Include="DlgRemoteControlAbility.cpp" />
+    <ClCompile Include="DlgRemoteControllerCfg.cpp" />
+    <ClCompile Include="DlgRemoteControllerManage.cpp" />
+    <ClCompile Include="DlgRemoteControlPlay.cpp" />
+    <ClCompile Include="DlgRemoteControlStatus.cpp" />
+    <ClCompile Include="DlgRemoteEmailAddReceiver.cpp" />
+    <ClCompile Include="DlgRemoteeMMC.cpp" />
+    <ClCompile Include="DlgRemoteFanException.cpp" />
+    <ClCompile Include="DlgRemoteHideAlarm.cpp" />
+    <ClCompile Include="DlgRemoteHideArea.cpp" />
+    <ClCompile Include="DlgRemoteIPAccess.cpp" />
+    <ClCompile Include="DlgRemoteKey.cpp" />
+    <ClCompile Include="DlgRemoteMotionDetect.cpp" />
+    <ClCompile Include="DlgRemoteNetNFS.cpp" />
+    <ClCompile Include="DlgRemotePullException.cpp" />
+    <ClCompile Include="DlgRemoteRecordSchedule.cpp" />
+    <ClCompile Include="DlgRemoteShowString.cpp" />
+    <ClCompile Include="DlgRemoteStreamRecordSchedule.cpp" />
+    <ClCompile Include="DlgRemoteVideoInLost.cpp" />
+    <ClCompile Include="DlgRemoteVideoInput.cpp" />
+    <ClCompile Include="DlgRemoteZone.cpp" />
+    <ClCompile Include="DLGResetLoginPassWord.cpp" />
+    <ClCompile Include="DlgRoiCfg.cpp" />
+    <ClCompile Include="DlgRS485DLLParamCfg.cpp" />
+    <ClCompile Include="DlgRS485ProtocolVersion.cpp" />
+    <ClCompile Include="DlgRtspConfig.cpp" />
+    <ClCompile Include="DlgSafeCabinState.cpp" />
+    <ClCompile Include="DlgSafetyCabin.cpp" />
+    <ClCompile Include="DlgScaleOutCfg.cpp" />
+    <ClCompile Include="DlgSceneChangeUpdate.cpp" />
+    <ClCompile Include="DlgSceneTimeCfg.cpp" />
+    <ClCompile Include="DlgScheduleInfo.cpp" />
+    <ClCompile Include="DlgSchedulePlan.cpp" />
+    <ClCompile Include="DlgScreenCtrl.cpp" />
+    <ClCompile Include="DlgScreenLogoCfg.cpp" />
+    <ClCompile Include="DlgScreenLogoCfgUniform.cpp" />
+    <ClCompile Include="DlgSDIAutoTrackCfg.cpp" />
+    <ClCompile Include="DlgSDIMatrix.cpp" />
+    <ClCompile Include="DlgSecurityCfg.cpp" />
+    <ClCompile Include="DlgSenceControl.cpp" />
+    <ClCompile Include="DlgSenceControlUniform.cpp" />
+    <ClCompile Include="DlgSensorAddPreview.cpp" />
+    <ClCompile Include="DlgSensorCfg.cpp" />
+    <ClCompile Include="DlgSerialTrans.cpp" />
+    <ClCompile Include="DlgShipDetection.cpp" />
+    <ClCompile Include="DlgSignalLightSync.cpp" />
+    <ClCompile Include="DlgSizeFilter.cpp" />
+    <ClCompile Include="DlgSlaveCameraInfo.cpp" />
+    <ClCompile Include="DlgSmartCalib.cpp" />
+    <ClCompile Include="DlgSmartSearchPicture.cpp" />
+    <ClCompile Include="DlgSmartStoragedDetection.cpp" />
+    <ClCompile Include="DlgSneakAndLock.cpp" />
+    <ClCompile Include="DlgSnmpCfg.cpp" />
+    <ClCompile Include="DlgSoftwareService.cpp" />
+    <ClCompile Include="DlgSplitterStartTrans.cpp" />
+    <ClCompile Include="DlgSplitterTransparent.cpp" />
+    <ClCompile Include="DlgStorageServerSwitch.cpp" />
+    <ClCompile Include="DlgStreamAttachInfoCfg.cpp" />
+    <ClCompile Include="DlgStreamID.cpp" />
+    <ClCompile Include="DlgStreamManualRecordAndLock.cpp" />
+    <ClCompile Include="DlgStreamMediaCfg.cpp" />
+    <ClCompile Include="DlgStreamRecCheck.cpp" />
+    <ClCompile Include="DlgStreamRecordInfo.cpp" />
+    <ClCompile Include="DlgStreamRecordStatus.cpp" />
+    <ClCompile Include="DlgStreamSrcCfg.cpp" />
+    <ClCompile Include="DlgSubIPCCfg.cpp" />
+    <ClCompile Include="DlgSubITSCfg.cpp" />
+    <ClCompile Include="DlgSubsysNetCfg.cpp" />
+    <ClCompile Include="DlgSuperBrainFunctionTest.cpp" />
+    <ClCompile Include="DlgSystemTimeAlarm.cpp" />
+    <ClCompile Include="DlgT1test.cpp" />
+    <ClCompile Include="DlgTalkMREx.cpp" />
+    <ClCompile Include="DlgTermGroup.cpp" />
+    <ClCompile Include="DlgTerminalConferenceStatus.cpp" />
+    <ClCompile Include="DlgTerminalGkCfg.cpp" />
+    <ClCompile Include="DlgTermManage.cpp" />
+    <ClCompile Include="DlgTermPlay.cpp" />
+    <ClCompile Include="DlgTermState.cpp" />
+    <ClCompile Include="DlgTest.cpp" />
+    <ClCompile Include="DlgThermalDoubleSpectrum.cpp" />
+    <ClCompile Include="DlgThirdGenerationCfg.cpp" />
+    <ClCompile Include="DlgThreeDimensionaPtz.cpp" />
+    <ClCompile Include="DlgThremalPipCfg.cpp" />
+    <ClCompile Include="DlgThscreen.cpp" />
+    <ClCompile Include="DlgTimeCorrect.cpp" />
+    <ClCompile Include="DlgTmeCfg.cpp" />
+    <ClCompile Include="DlgTPSRuleCfg.cpp" />
+    <ClCompile Include="DlgTransAutoReboot.cpp" />
+    <ClCompile Include="DlgTransCompression.cpp" />
+    <ClCompile Include="DlgTransConfig.cpp" />
+    <ClCompile Include="DlgTransDevStatus.cpp" />
+    <ClCompile Include="DlgTransStreamSrcCfg.cpp" />
+    <ClCompile Include="DlgTrialAudioActivation.cpp" />
+    <ClCompile Include="DLGTrialAudioMix.cpp" />
+    <ClCompile Include="DlgTrialCaseParam.cpp" />
+    <ClCompile Include="DlgTrialDVR.cpp" />
+    <ClCompile Include="DlgTrialHostStatus.cpp" />
+    <ClCompile Include="DlgTrialPIPCfg.cpp" />
+    <ClCompile Include="DlgTsSeries.cpp" />
+    <ClCompile Include="DlgUHFBasicInfo.cpp" />
+    <ClCompile Include="DlgUHFRFIDReaderCfg.cpp" />
+    <ClCompile Include="DlgUniformInterface.cpp" />
+    <ClCompile Include="DlgUpgrade.cpp" />
+    <ClCompile Include="DlgUpgradeIPC.cpp" />
+    <ClCompile Include="DlgUploadBlackList.cpp" />
+    <ClCompile Include="DlgUploadBlackListPicture.cpp" />
+    <ClCompile Include="DlgUploadCalibrationFile.cpp" />
+    <ClCompile Include="DlgUploadFaceLib.cpp" />
+    <ClCompile Include="DlgUploadFile.cpp" />
+    <ClCompile Include="DlgUploadHd.cpp" />
+    <ClCompile Include="DlgUploadLogo.cpp" />
+    <ClCompile Include="DlgUpnpCfg.cpp" />
+    <ClCompile Include="DlgUpStreamCfg.cpp" />
+    <ClCompile Include="DlgVcaAidRuleCfg.cpp" />
+    <ClCompile Include="DlgVCAAlarmLogo.cpp" />
+    <ClCompile Include="DlgVcaAlarmTimeCfg.cpp" />
+    <ClCompile Include="DlgVcaAuxAreaList.cpp" />
+    <ClCompile Include="DlgVcaBaselineScene.cpp" />
+    <ClCompile Include="DlgVcaBehaviorCalibrate.cpp" />
+    <ClCompile Include="DlgVcaBehaviorCfg.cpp" />
+    <ClCompile Include="DlgVcaBlackList.cpp" />
+    <ClCompile Include="DlgVcaBVCalibrate.cpp" />
+    <ClCompile Include="DlgVcaChanCtrlCfg.cpp" />
+    <ClCompile Include="DlgVcaChannelWorkMode.cpp" />
+    <ClCompile Include="DlgVcaDataBase.cpp" />
+    <ClCompile Include="DlgVcaDetectionCfg.cpp" />
+    <ClCompile Include="DlgVCADetionCfg.cpp" />
+    <ClCompile Include="DlgVcaDevAbility.cpp" />
+    <ClCompile Include="DlgVcaDevAccessCfg.cpp" />
+    <ClCompile Include="DlgVcaDevChannel.cpp" />
+    <ClCompile Include="DlgVcaDrawMode.cpp" />
+    <ClCompile Include="DlgVcaEnterRegion.cpp" />
+    <ClCompile Include="DlgVcaFace.cpp" />
+    <ClCompile Include="DlgVcaFaceDataBase.cpp" />
+    <ClCompile Include="DlgVcaFaceDetect.cpp" />
+    <ClCompile Include="DlgVcaFaceMatchLogSearch.cpp" />
+    <ClCompile Include="DlgVcaFaceSnapCfg.cpp" />
+    <ClCompile Include="DlgVcaFindBackgroundPic.cpp" />
+    <ClCompile Include="DlgVcaFindSnapData.cpp" />
+    <ClCompile Include="DlgVcaForensicsModeCfg.cpp" />
+    <ClCompile Include="DlgVcaFunCfg.cpp" />
+    <ClCompile Include="DlgVcaITCTriggerCfg.cpp" />
+    <ClCompile Include="DlgVcaITSCalibrate.cpp" />
+    <ClCompile Include="DlgVcaITSCfg.cpp" />
+    <ClCompile Include="DlgVcaIvmsCfg.cpp" />
+    <ClCompile Include="DlgVcaIvmsSched.cpp" />
+    <ClCompile Include="DlgVcaLaneCfg.cpp" />
+    <ClCompile Include="DlgVcaLF.cpp" />
+    <ClCompile Include="DlgVcaMaskRegion.cpp" />
+    <ClCompile Include="DlgVcaObjectColor.cpp" />
+    <ClCompile Include="DlgVcaParamkey.cpp" />
+    <ClCompile Include="DlgVcaPositionRule.cpp" />
+    <ClCompile Include="DlgVcaRemoteChannel.cpp" />
+    <ClCompile Include="DlgVcaResetCounterCfg.cpp" />
+    <ClCompile Include="DlgVcaRuleCfg.cpp" />
+    <ClCompile Include="DlgVCARuleColorCfg.cpp" />
+    <ClCompile Include="DlgVcaSavePathConfig.cpp" />
+    <ClCompile Include="DlgVcaSceneAidRuleCfg.cpp" />
+    <ClCompile Include="DlgVcaSceneCfg.cpp" />
+    <ClCompile Include="DlgVcaSceneITSCalibrate.cpp" />
+    <ClCompile Include="DlgVcaSceneLaneCfg.cpp" />
+    <ClCompile Include="DlgVcaSceneRegionList.cpp" />
+    <ClCompile Include="DlgVcaSceneTpsRuleCfg.cpp" />
+    <ClCompile Include="DlgVcaSceneTrafficCfg.cpp" />
+    <ClCompile Include="DlgVcaSingleProcImg.cpp" />
+    <ClCompile Include="DlgVcaSnapDatabase.cpp" />
+    <ClCompile Include="DlgVcaTrackCfg.cpp" />
+    <ClCompile Include="DlgVcaVersionList.cpp" />
+    <ClCompile Include="DlgVcaVQDAlarmPic.cpp" />
+    <ClCompile Include="DlgVcaVQDEventRule.cpp" />
+    <ClCompile Include="DlgVcaWorkStatus.cpp" />
+    <ClCompile Include="DlgVCSExternalMatrix.cpp" />
+    <ClCompile Include="DlgVedioAudioInCfg.cpp" />
+    <ClCompile Include="DlgVedioImgDB.cpp" />
+    <ClCompile Include="DlgVehicleCfg.cpp" />
+    <ClCompile Include="DlgVehicleControlCfg.cpp" />
+    <ClCompile Include="DlgVehicleInfo.cpp" />
+    <ClCompile Include="DlgVehicleMvaCfg.cpp" />
+    <ClCompile Include="DlgVehicleRecogCFG.cpp" />
+    <ClCompile Include="DlgVideoIntercomAlarmCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomAuthCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomCall.cpp" />
+    <ClCompile Include="DlgVideoIntercomCallRoomCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomDeviceIDCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomElevatorCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomGateway.cpp" />
+    <ClCompile Include="DlgVideoIntercomIOInCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomIOOutCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomNoticeDataCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomNoticeVideoDataCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomOpTimeCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomPrivilegePwdCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomRelateDevCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomRoomCustomCfg.cpp" />
+    <ClCompile Include="DlgVideoIntercomStreamCfg.cpp" />
+    <ClCompile Include="DlgVideoOut.cpp" />
+    <ClCompile Include="DlgVideoOutResolutionCfg.cpp" />
+    <ClCompile Include="DlgVideoWallElse.cpp" />
+    <ClCompile Include="DlgVISDevInfo.cpp" />
+    <ClCompile Include="DlgVISRegisterInfo.cpp" />
+    <ClCompile Include="DlgVoiceTalk.cpp" />
+    <ClCompile Include="DlgVQDCfg.cpp" />
+    <ClCompile Include="DlgVqdPlan.cpp" />
+    <ClCompile Include="DlgWall.cpp" />
+    <ClCompile Include="DlgWallBasemapWin.cpp" />
+    <ClCompile Include="DlgWallCfg.cpp" />
+    <ClCompile Include="DlgWallCfgUniform.cpp" />
+    <ClCompile Include="DlgWallControl.cpp" />
+    <ClCompile Include="DlgWallPreview.cpp" />
+    <ClCompile Include="DlgWallVirLED.cpp" />
+    <ClCompile Include="DlgWallWin.cpp" />
+    <ClCompile Include="DlgWallWinVideoWall.cpp" />
+    <ClCompile Include="DlgWD1Enable.cpp" />
+    <ClCompile Include="DlgWDRCfg.cpp" />
+    <ClCompile Include="DlgWeekPlan.cpp" />
+    <ClCompile Include="DlgWhiteList.cpp" />
+    <ClCompile Include="DlgWiegandCfg.cpp" />
+    <ClCompile Include="DlgWifi.cpp" />
+    <ClCompile Include="DlgWifiDHCPCfg.cpp" />
+    <ClCompile Include="DlgWIFIServerCfg.cpp" />
+    <ClCompile Include="DlgWinPreview.cpp" />
+    <ClCompile Include="DlgWirelessBusinessSearch.cpp" />
+    <ClCompile Include="DlgWirelessDial.cpp" />
+    <ClCompile Include="DlgWirelessServer.cpp" />
+    <ClCompile Include="DlgWorkingClass.cpp" />
+    <ClCompile Include="DlgXmlAbility.cpp" />
+    <ClCompile Include="DlgXmlAlarmAbility.cpp" />
+    <ClCompile Include="DlgXmlDecoderAbility.cpp" />
+    <ClCompile Include="DlgXmlEventAbility.cpp" />
+    <ClCompile Include="DlgXmlItcAbility.cpp" />
+    <ClCompile Include="DlgXmlJpegCapAbility.cpp" />
+    <ClCompile Include="DlgXmlLCDAbility.cpp" />
+    <ClCompile Include="DlgXmlNetAppAbility.cpp" />
+    <ClCompile Include="DlgXmlRaidAbility.cpp" />
+    <ClCompile Include="DlgXmlSerialAbility.cpp" />
+    <ClCompile Include="DlgXmlVideoPic.cpp" />
+    <ClCompile Include="DlgXmlWallAblity.cpp" />
+    <ClCompile Include="DlgZeroChanCfg.cpp" />
+    <ClCompile Include="DlgZoneLinkageChanCfg.cpp" />
+    <ClCompile Include="DrawFun.cpp" />
+    <ClCompile Include="explorer.cpp" />
+    <ClCompile Include="EzvizDDNSAPI.cpp" />
+    <ClCompile Include="InfoDiffusionParamsConvert.cpp" />
+    <ClCompile Include="JPEGPicDownload.cpp" />
+    <ClCompile Include="LEDScreenAdjust.cpp" />
+    <ClCompile Include="LocalConfigFile.cpp" />
+    <ClCompile Include="Markup.cpp" />
+    <ClCompile Include="MatCodeSplitter.cpp" />
+    <ClCompile Include="MatCycLink.cpp" />
+    <ClCompile Include="MatDecDnsCfg.cpp" />
+    <ClCompile Include="MatDecoderStatus.cpp" />
+    <ClCompile Include="MatDispChan.cpp" />
+    <ClCompile Include="MatDispChanControl.cpp" />
+    <ClCompile Include="MatDynamicTest.cpp" />
+    <ClCompile Include="MatPassive.cpp" />
+    <ClCompile Include="MatPlayBack.cpp" />
+    <ClCompile Include="MatTrans.cpp" />
+    <ClCompile Include="MatVedioPlatform.cpp" />
+    <ClCompile Include="MimeProtocolParsing.cpp" />
+    <ClCompile Include="ModifyRecord.cpp" />
+    <ClCompile Include="ParseXMLHelper.cpp" />
+    <ClCompile Include="Picture.cpp" />
+    <ClCompile Include="PTZButton.cpp" />
+    <ClCompile Include="PTZButton1.cpp" />
+    <ClCompile Include="PtzControl.cpp" />
+    <ClCompile Include="RecvCardArea.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RecvCardVersion.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SoundIn.cpp" />
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="SubDlgAdapterCfg.cpp" />
+    <ClCompile Include="SubDlgAlarmCfg.cpp" />
+    <ClCompile Include="SubDlgArrayCfg.cpp" />
+    <ClCompile Include="SubDlgATMInfoCfg.cpp" />
+    <ClCompile Include="SubDlgBTS.cpp" />
+    <ClCompile Include="SubDlgChanCfg.cpp" />
+    <ClCompile Include="SubDlgCVRCfg.cpp" />
+    <ClCompile Include="SubDlgDeviceCfg.cpp" />
+    <ClCompile Include="SubDlgDVRNVRCfg.cpp" />
+    <ClCompile Include="SubDlgExceptionCfg.cpp" />
+    <ClCompile Include="SubDlgMatDecCfg.cpp" />
+    <ClCompile Include="SubDlgNetworkCfg.cpp" />
+    <ClCompile Include="SubDlgPDCfg.cpp" />
+    <ClCompile Include="SubDlgPreviewCfgV30.cpp" />
+    <ClCompile Include="SubDlgSerialCfg.cpp" />
+    <ClCompile Include="SubDlgUserCfg.cpp" />
+    <ClCompile Include="SubDlgVDCfg.cpp" />
+    <ClCompile Include="SubDlgWndSequence.cpp" />
+    <ClCompile Include="TimeSegment.cpp" />
+    <ClCompile Include="UPLOAD_PANORAMIC_STITCH.cpp" />
+    <ClCompile Include="UserDlg.cpp" />
+    <ClCompile Include="VcaCommonOperations.cpp" />
+    <ClCompile Include="WaveSound.cpp" />
+    <ClCompile Include="XMLParamsConvert.cpp" />
+    <ClCompile Include="XmlUserAbility.cpp" />
+    <ClCompile Include="xml\tinystr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="xml\tinyxml.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="xml\tinyxmlerror.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="xml\tinyxmlparser.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="xml\XmlBase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ClientDemo.rc" />
+    <ResourceCompile Include="ClientDemoEn.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\incCn\HCNetSDK.h" />
+    <ClInclude Include="CheckEnabled.h" />
+    <ClInclude Include="cjson\cJSON.h" />
+    <ClInclude Include="ConvertC10S21Param.h" />
+    <ClInclude Include="curl_httpclient.h" />
+    <ClInclude Include="DeviceCfgFile.h" />
+    <ClInclude Include="DlgAbnormalInfo.h" />
+    <ClInclude Include="DlgAccessoryCardInfo.h" />
+    <ClInclude Include="DlgAcsAttendance.h" />
+    <ClInclude Include="DlgAcsCheckFacePicture.h" />
+    <ClInclude Include="DlgAcsFaceAndTemplate.h" />
+    <ClInclude Include="DlgAcsFaceParamCfg.h" />
+    <ClInclude Include="DlgAcsLocalControllerCfg.h" />
+    <ClInclude Include="DlgAcsLocalControllerStatus.h" />
+    <ClInclude Include="DlgAcsLogSearch.h" />
+    <ClInclude Include="DlgAcsMoudleStatus.h" />
+    <ClInclude Include="DlgAcsOnlineLocalControllerCfg.h" />
+    <ClInclude Include="DlgAcsSearchExamCompareResult.h" />
+    <ClInclude Include="DlgAcsSetExamineeInfo.h" />
+    <ClInclude Include="DlgAcsSetExamInfo.h" />
+    <ClInclude Include="DlgAcsUSBDeviceManage.h" />
+    <ClInclude Include="DlgAcsXmlDiffusion.h" />
+    <ClInclude Include="DlgAlarmHostDong.h" />
+    <ClInclude Include="DlgAlarmhostSTDXMLConfig.h" />
+    <ClInclude Include="DlgAlarmHostZoneCfg.h" />
+    <ClInclude Include="DlgAlarmInfo.h" />
+    <ClInclude Include="DlgAlarmOneKey.h" />
+    <ClInclude Include="DlgArmingHost.h" />
+    <ClInclude Include="DlgAsynloginWait.h" />
+    <ClInclude Include="DlgAttendanceHolidayPlan.h" />
+    <ClInclude Include="DlgAttendanceRule.h" />
+    <ClInclude Include="DlgAttendanceSummaryInfo.h" />
+    <ClInclude Include="DlgAudioUploadDownload.h" />
+    <ClInclude Include="..\incCn\DataType.h" />
+    <ClInclude Include="..\incCn\DecodeCardSdk.h" />
+    <ClInclude Include="..\incCn\plaympeg4.h" />
+    <ClInclude Include="..\incEn\DataType.h" />
+    <ClInclude Include="..\incEn\DecodeCardSdk.h" />
+    <ClInclude Include="..\incEn\HCNetSDK.h" />
+    <ClInclude Include="..\incEn\plaympeg4.h" />
+    <ClInclude Include="DlgBatchUploadBlackList.h" />
+    <ClInclude Include="DlgBellFileCfg.h" />
+    <ClInclude Include="DlgCaptureFace.h" />
+    <ClInclude Include="DlgCaptureFingerPrint.h" />
+    <ClInclude Include="DlgCapturePictureV50.h" />
+    <ClInclude Include="DLGCfgSecuFile.h" />
+    <ClInclude Include="DlgCloudCfg.h" />
+    <ClInclude Include="DlgCloudManage.h" />
+    <ClInclude Include="DlgCloudUploadstrategyCfg.h" />
+    <ClInclude Include="DlgCloudUrlCfg.h" />
+    <ClInclude Include="DlgCluster.h" />
+    <ClInclude Include="DlgCVRDataManage.h" />
+    <ClInclude Include="DlgCVRPassbackBasicCfg.h" />
+    <ClInclude Include="DlgCVRPreviewByStreamID.h" />
+    <ClInclude Include="DlgCVRRemoteBackup.h" />
+    <ClInclude Include="DlgCVRResourceIPCfg.h" />
+    <ClInclude Include="DlgDepartmentParam.h" />
+    <ClInclude Include="DlgDetectorRegister.h" />
+    <ClInclude Include="DlgDevStorageInfo.h" />
+    <ClInclude Include="DlgDyanmicPic.h" />
+    <ClInclude Include="DlgEagleCfg.h" />
+    <ClInclude Include="DlgEagleEyeCfg.h" />
+    <ClInclude Include="DlgEncryptCert.h" />
+    <ClInclude Include="DlgEzvizLogin.h" />
+    <ClInclude Include="DlgFaceData.h" />
+    <ClInclude Include="DlgFacelibSearch.h" />
+    <ClInclude Include="DLGFIREPTZEXCFG.h" />
+    <ClInclude Include="DlgFirmWareversion.h" />
+    <ClInclude Include="DlgFTPUpload.h" />
+    <ClInclude Include="DLGGetChannelInfo.h" />
+    <ClInclude Include="DlgGetRegisterInfo.h" />
+    <ClInclude Include="DlgGKServer.h" />
+    <ClInclude Include="DlgHardDiskStorageTest.h" />
+    <ClInclude Include="DlgHardDiskVolumeInfo.h" />
+    <ClInclude Include="DlgHiddenInfo.h" />
+    <ClInclude Include="DlgInfoDiffusionClock.h" />
+    <ClInclude Include="DlgInfoDiffusionClockWeather.h" />
+    <ClInclude Include="DlgInfoDiffusionTermainlServer.h" />
+    <ClInclude Include="DlgInfoDiffusionVolum.h" />
+    <ClInclude Include="DlgInfoGerenal.h" />
+    <ClInclude Include="DlgInfoXmlCfgWithUrl.h" />
+    <ClInclude Include="DlgInquestTrayConfig.h" />
+    <ClInclude Include="DlgIperf.h" />
+    <ClInclude Include="DlgJPEGPicDownloadMedical.h" />
+    <ClInclude Include="DlgKeyboardCfg.h" />
+    <ClInclude Include="DlgLEDCheckCond.h" />
+    <ClInclude Include="DlgLEDVersion.h" />
+    <ClInclude Include="DlgMacFilter.h" />
+    <ClInclude Include="DlgManualThermCfg.h" />
+    <ClInclude Include="DlgMCUAbilityDetect.h" />
+    <ClInclude Include="DlgMCUAddConference.h" />
+    <ClInclude Include="DlgMCUClearConfHistory.h" />
+    <ClInclude Include="DlgMCUDelConference.h" />
+    <ClInclude Include="DlgMCUGetConfStatus.h" />
+    <ClInclude Include="DlgMCUGetDailyDistribution.h" />
+    <ClInclude Include="DlgMCUSearchConference.h" />
+    <ClInclude Include="DlgMCUTerminalCtrl.h" />
+    <ClInclude Include="DlgMCUTerminalGroupCfg.h" />
+    <ClInclude Include="DlgMCUTerminalManageCfg.h" />
+    <ClInclude Include="DlgOISCfg.h" />
+    <ClInclude Include="DlgPicBatchUpload.h" />
+    <ClInclude Include="DlgPictureSwitchCtrl.h" />
+    <ClInclude Include="DlgPlayEvent.h" />
+    <ClInclude Include="DlgPlayRemoteFileMedical.h" />
+    <ClInclude Include="DlgPosChanFilter.h" />
+    <ClInclude Include="DlgPosConnectMode.h" />
+    <ClInclude Include="DlgPosFilterRule.h" />
+    <ClInclude Include="DlgPosInfoctrl.h" />
+    <ClInclude Include="DlgPosManage.h" />
+    <ClInclude Include="DlgPostRadarCfg.h" />
+    <ClInclude Include="DlgProductDH.h" />
+    <ClInclude Include="DlgPtzNotification.h" />
+    <ClInclude Include="DlgRecordHostClassDataStatistic.h" />
+    <ClInclude Include="DlgRecordHostDirectedAdvanceCfg.h" />
+    <ClInclude Include="DlgRecordHostEducationServerCfg.h" />
+    <ClInclude Include="DlgRecordHostVedioSwitchConfig.h" />
+    <ClInclude Include="DlgRecordHostVideoTitleConfig.h" />
+    <ClInclude Include="DlgRecPassBack.h" />
+    <ClInclude Include="DlgRecPassBackHistorySchdule.h" />
+    <ClInclude Include="DlgRecPassBackScheCfg.h" />
+    <ClInclude Include="DlgRecPassbackTaskExecutable.h" />
+    <ClInclude Include="DlgRegionDetectCfg.h" />
+    <ClInclude Include="DlgRemoteeMMC.h" />
+    <ClInclude Include="DLGResetLoginPassWord.h" />
+    <ClInclude Include="DlgRS485DLLParamCfg.h" />
+    <ClInclude Include="DlgRS485ProtocolVersion.h" />
+    <ClInclude Include="DlgScheduleInfo.h" />
+    <ClInclude Include="DlgSchedulePlan.h" />
+    <ClInclude Include="DlgShipDetection.h" />
+    <ClInclude Include="DlgSmartCalib.h" />
+    <ClInclude Include="DlgSoftwareService.h" />
+    <ClInclude Include="DlgStreamMediaCfg.h" />
+    <ClInclude Include="DlgStreamRecCheck.h" />
+    <ClInclude Include="DlgSuperBrainFunctionTest.h" />
+    <ClInclude Include="DlgTerminalGkCfg.h" />
+    <ClInclude Include="DlgTest.h" />
+    <ClInclude Include="DlgThreeDimensionaPtz.h" />
+    <ClInclude Include="DlgThremalPipCfg.h" />
+    <ClInclude Include="DLGTrialAudioMix.h" />
+    <ClInclude Include="DlgUHFBasicInfo.h" />
+    <ClInclude Include="DlgUHFRFIDReaderCfg.h" />
+    <ClInclude Include="DlgUploadBlackList.h" />
+    <ClInclude Include="DlgUploadBlackListPicture.h" />
+    <ClInclude Include="DlgUploadFaceLib.h" />
+    <ClInclude Include="DlgUploadHd.h" />
+    <ClInclude Include="DlgVcaVersionList.h" />
+    <ClInclude Include="DlgVehicleInfo.h" />
+    <ClInclude Include="DlgVehicleRecogCFG.h" />
+    <ClInclude Include="DlgVideoIntercomNoticeVideoDataCfg.h" />
+    <ClInclude Include="DlgVideoIntercomRoomCustomCfg.h" />
+    <ClInclude Include="explorer.h" />
+    <ClInclude Include="EzvizDDNSAPI.h" />
+    <ClInclude Include="LEDScreenAdjust.h" />
+    <ClInclude Include="LocalConfigFile.h" />
+    <ClInclude Include="MimeProtocolParsing.h" />
+    <ClInclude Include="ParseXMLHelper.h" />
+    <ClInclude Include="ParseXMLUtil.h" />
+    <ClInclude Include="RecvCardArea.h" />
+    <ClInclude Include="RecvCardVersion.h" />
+    <ClInclude Include="resourceEn.h" />
+    <ClInclude Include="DlgWiegandCfg.h" />
+    <ClInclude Include="StringUtil.h" />
+    <ClInclude Include="UPLOAD_PANORAMIC_STITCH.h" />
+    <ClInclude Include="xml\tinystr.h" />
+    <ClInclude Include="xml\tinyxml.h" />
+    <ClInclude Include="xml\XmlBase.h" />
+    <ClInclude Include="B10SeriesConfig.h" />
+    <ClInclude Include="ClientDemo.h" />
+    <ClInclude Include="ClientDemoDlg.h" />
+    <ClInclude Include="DecoderCfg.h" />
+    <ClInclude Include="DeviceDlg.h" />
+    <ClInclude Include="DialogMultiNetCard.h" />
+    <ClInclude Include="DialogRecordTimeSpan.h" />
+    <ClInclude Include="Dlg67DVSCfg.h" />
+    <ClInclude Include="DlgAbilityAutoDetect.h" />
+    <ClInclude Include="DlgACAlarmInOutCfg.h" />
+    <ClInclude Include="DlgACCardParam.h" />
+    <ClInclude Include="DlgAccessCameraCfg.h" />
+    <ClInclude Include="DlgAcsCardPasswdCfg.h" />
+    <ClInclude Include="DlgAcsCardPasswdParam.h" />
+    <ClInclude Include="DlgAcsCardUserInfoCfg.h" />
+    <ClInclude Include="DlgAcsCaseSensor.h" />
+    <ClInclude Include="DlgAcsCfg.h" />
+    <ClInclude Include="DlgAcsExternalDevCfg.h" />
+    <ClInclude Include="DlgAcsFingerPrintCfg.h" />
+    <ClInclude Include="DlgACSGateTimeCFG.h" />
+    <ClInclude Include="DlgAcsPersonnelChannelCfg.h" />
+    <ClInclude Include="DlgAcsPhoneDoorRightCfg.h" />
+    <ClInclude Include="DlgAcsSmsCfg.h" />
+    <ClInclude Include="DlgAcsSnapCfg.h" />
+    <ClInclude Include="DlgAcsWorkStatus.h" />
+    <ClInclude Include="DlgAddDevice.h" />
+    <ClInclude Include="DlgAES.h" />
+    <ClInclude Include="DlgAlarmCamCfg.h" />
+    <ClInclude Include="DlgAlarmCenterNetCfg.h" />
+    <ClInclude Include="DlgAlarmCenterServerCfg.h" />
+    <ClInclude Include="DlgAlarmChanAblitity.h" />
+    <ClInclude Include="DlgAlarmExceptionHandle.h" />
+    <ClInclude Include="DlgAlarmHost.h" />
+    <ClInclude Include="DlgAlarmHostAbility.h" />
+    <ClInclude Include="DlgAlarmHostAudioAssociateAlarm.h" />
+    <ClInclude Include="DlgAlarmhostDataUploadMode.h" />
+    <ClInclude Include="DlgAlarmHostDialParam.h" />
+    <ClInclude Include="DlgAlarmHostEnableCfg.h" />
+    <ClInclude Include="DlgAlarmHostEventTrigger.h" />
+    <ClInclude Include="DlgAlarmhostExternalDevLimitValue.h" />
+    <ClInclude Include="DlgAlarmHostExternalDevState.h" />
+    <ClInclude Include="DlgAlarmHostExternalModule.h" />
+    <ClInclude Include="DlgAlarmHostFaultProcess.h" />
+    <ClInclude Include="DlgAlarmHostGetAllModule.h" />
+    <ClInclude Include="DlgAlarmHostGPRS.h" />
+    <ClInclude Include="DlgAlarmhostHistoryData.h" />
+    <ClInclude Include="DlgAlarmHostLED.h" />
+    <ClInclude Include="DlgAlarmHostLEDBrightness.h" />
+    <ClInclude Include="DlgAlarmHostLogSearch.h" />
+    <ClInclude Include="DlgAlarmhostModuleCfg.h" />
+    <ClInclude Include="DlgAlarmHostNetCfg.h" />
+    <ClInclude Include="DlgAlarmhostPointCfg.h" />
+    <ClInclude Include="DlgAlarmHostPrinter.h" />
+    <ClInclude Include="DlgAlarmHostReportMode.h" />
+    <ClInclude Include="DlgAlarmHostRs485.h" />
+    <ClInclude Include="DlgAlarmhostSensorLinkage.h" />
+    <ClInclude Include="DlgAlarmHostStatus.h" />
+    <ClInclude Include="DlgAlarmhostSubsystem.h" />
+    <ClInclude Include="DlgAlarmHostTransparent.h" />
+    <ClInclude Include="DlgAlarmHostTriggerCode.h" />
+    <ClInclude Include="DlgAlarmHostZoomAddr.h" />
+    <ClInclude Include="DlgAlarmKeyboardUser.h" />
+    <ClInclude Include="DlgAlarmNetUser.h" />
+    <ClInclude Include="DlgAlarmOperatorUser.h" />
+    <ClInclude Include="DlgAlarmOutCfg.h" />
+    <ClInclude Include="DlgAlarmPicCfg.h" />
+    <ClInclude Include="DlgAlarmTamper.h" />
+    <ClInclude Include="DlgAntiSneakHostCfg.h" />
+    <ClInclude Include="DlgAreaMaskCfg.h" />
+    <ClInclude Include="DlgAreaMonitorCfg.h" />
+    <ClInclude Include="DlgAtmFrameFormatV30.h" />
+    <ClInclude Include="DlgAudioChanCfg.h" />
+    <ClInclude Include="DlgAudioDiacriticalCfg.h" />
+    <ClInclude Include="DlgAudioInVolumeCfg1.h" />
+    <ClInclude Include="DlgAudioOutVolumeCfg.h" />
+    <ClInclude Include="DlgAutoReboot.h" />
+    <ClInclude Include="DlgAutoUpgrade.h" />
+    <ClInclude Include="DlgBatchConfig.h" />
+    <ClInclude Include="DlgBathcUserRightCfg.h" />
+    <ClInclude Include="DlgBatteryPower.h" />
+    <ClInclude Include="DlgBroadCast.h" />
+    <ClInclude Include="DlgBuiltinSupplementLight.h" />
+    <ClInclude Include="DlgBvCalibParamCfg.h" />
+    <ClInclude Include="DlgC10S21Config.h" />
+    <ClInclude Include="DlgCameraSetupCfg.h" />
+    <ClInclude Include="DlgCardReaderCfg.h" />
+    <ClInclude Include="DlgCaseInfo.h" />
+    <ClInclude Include="DlgCcdParam.h" />
+    <ClInclude Include="DlgCenterPoint.h" />
+    <ClInclude Include="DlgCertInfo.h" />
+    <ClInclude Include="DlgChanInputAbility.h" />
+    <ClInclude Include="DlgChannelInfo.h" />
+    <ClInclude Include="DlgCheckTime.h" />
+    <ClInclude Include="DlgClearAcsParam.h" />
+    <ClInclude Include="DlgCloudStorage.h" />
+    <ClInclude Include="DlgCloudStorageCfg.h" />
+    <ClInclude Include="DlgCloudStoragePhoneTest.h" />
+    <ClInclude Include="DlgCMSParam.h" />
+    <ClInclude Include="DlgCodeSplitter.h" />
+    <ClInclude Include="DlgCommuSecurity.h" />
+    <ClInclude Include="DlgCompressionV30.h" />
+    <ClInclude Include="DlgConferenceParam.h" />
+    <ClInclude Include="DlgConferenceRegion.h" />
+    <ClInclude Include="DlgConfigAll.h" />
+    <ClInclude Include="DlgConfigFlash.h" />
+    <ClInclude Include="DlgConnectList.h" />
+    <ClInclude Include="DlgCourseCfg.h" />
+    <ClInclude Include="DlgCourseInfo.h" />
+    <ClInclude Include="DlgCourseList.h" />
+    <ClInclude Include="DlgCreateVD.h" />
+    <ClInclude Include="DLGCreateWall.h" />
+    <ClInclude Include="DlgCuntomProtocal.h" />
+    <ClInclude Include="DlgCurrentEncodeAbility.h" />
+    <ClInclude Include="DlgCVR.h" />
+    <ClInclude Include="DlgDebug.h" />
+    <ClInclude Include="DlgDecoderAbility.h" />
+    <ClInclude Include="DlgDecoderControl.h" />
+    <ClInclude Include="DlgDecorder.h" />
+    <ClInclude Include="DlgDecWinStatus.h" />
+    <ClInclude Include="DlgDecWinStatusUniform.h" />
+    <ClInclude Include="DlgDelayPreviewCfg.h" />
+    <ClInclude Include="DlgDeviceAudioTalkCode.h" />
+    <ClInclude Include="DlgDeviceInfo.h" />
+    <ClInclude Include="DlgDeviceLanguageEncode.h" />
+    <ClInclude Include="DlgDeviceSelfCheckState.h" />
+    <ClInclude Include="DlgDeviceState.h" />
+    <ClInclude Include="DlgDevServer.h" />
+    <ClInclude Include="DlgDevWorkMode.h" />
+    <ClInclude Include="DlgDH3.h" />
+    <ClInclude Include="DlgDiagnosticServer.h" />
+    <ClInclude Include="DlgDiskQuota.h" />
+    <ClInclude Include="DlgDoorConfig.h" />
+    <ClInclude Include="DlgDoTest.h" />
+    <ClInclude Include="DlgDPCCfg.h" />
+    <ClInclude Include="DlgDynChanAbility.h" />
+    <ClInclude Include="DlgEctChanStatus.h" />
+    <ClInclude Include="DlgEctWorkState.h" />
+    <ClInclude Include="DlgEncodeAbility.h" />
+    <ClInclude Include="DlgEncodeJoint.h" />
+    <ClInclude Include="DlgESataMiniSasUsage.h" />
+    <ClInclude Include="DlgEthernetIpv6Cfg.h" />
+    <ClInclude Include="DlgEventCardLinkageCfg.h" />
+    <ClInclude Include="DlgExternalDev.h" />
+    <ClInclude Include="DlgEZVIZAccessCfg.h" />
+    <ClInclude Include="DlgFiberRingCfg.h" />
+    <ClInclude Include="DlgFibreDev.h" />
+    <ClInclude Include="DlgFireDetection.h" />
+    <ClInclude Include="DlgFishEye.h" />
+    <ClInclude Include="DlgFisheyeCorrect.h" />
+    <ClInclude Include="DlgFisheyeFECWnd.h" />
+    <ClInclude Include="DlgFishEyePtzControl.h" />
+    <ClInclude Include="DlgFisheyePtzPlayWnd.h" />
+    <ClInclude Include="DlgFisheyeTrackCfg.h" />
+    <ClInclude Include="DlgFormatHD.h" />
+    <ClInclude Include="DlgFortify.h" />
+    <ClInclude Include="DlgFrameCtrl.h" />
+    <ClInclude Include="DlgGatewayCardCfg.h" />
+    <ClInclude Include="DlgGatewayCardInfo.h" />
+    <ClInclude Include="DlgGatewayCfg.h" />
+    <ClInclude Include="DlgGB28181ServerCfg.h" />
+    <ClInclude Include="DlgGBT28181ProAccessUniform.h" />
+    <ClInclude Include="DlgGBT28181ProtocolAccess.h" />
+    <ClInclude Include="DlgGetAccessDeviceChannelInfo.h" />
+    <ClInclude Include="DlgGetAllPointCfg.h" />
+    <ClInclude Include="DlgGetAllRs485Cfg.h" />
+    <ClInclude Include="DlgGetAllRs485Slot.h" />
+    <ClInclude Include="DlgGetAllSensor.h" />
+    <ClInclude Include="DlgGetAllSensorJoint.h" />
+    <ClInclude Include="DlgGetAllSensorJointCfg.h" />
+    <ClInclude Include="DlgGetDigitalChannelStatus.h" />
+    <ClInclude Include="DlgGetWifiClientListInfo.h" />
+    <ClInclude Include="DlgGISInfo.h" />
+    <ClInclude Include="DlgGopInfo.h" />
+    <ClInclude Include="DlgGroupCfg.h" />
+    <ClInclude Include="DlgHardDiskCfg.h" />
+    <ClInclude Include="DlgHeatMapCfg.h" />
+    <ClInclude Include="DlgHolidayCfg.h" />
+    <ClInclude Include="DlgIDSMainBoard.h" />
+    <ClInclude Include="DlgImageDiffDetectionCfg.h" />
+    <ClInclude Include="DlgImExportIPCCfgFile.h" />
+    <ClInclude Include="DlgInChanVideoLostCfg.h" />
+    <ClInclude Include="DlgInfoDiffusionCapabilites.h" />
+    <ClInclude Include="DlgInfoDiffusionContainer.h" />
+    <ClInclude Include="DlgInfoDiffusionContent.h" />
+    <ClInclude Include="DlgInfoDiffusionMaterial.h" />
+    <ClInclude Include="DlgInfoDiffusionPlay.h" />
+    <ClInclude Include="DlgInfoDiffusionProgram.h" />
+    <ClInclude Include="DlgInfoDiffusionRelease.h" />
+    <ClInclude Include="DlgInfoDiffusionSchedule.h" />
+    <ClInclude Include="DlgInfoDiffusionScheduleSearch.h" />
+    <ClInclude Include="DlgInfoDiffusionScheduleSelfdefine.h" />
+    <ClInclude Include="DlgInfoDiffusionServer.h" />
+    <ClInclude Include="DlgInfoDiffusionShutdown.h" />
+    <ClInclude Include="DlgInfoDiffusionTerminal.h" />
+    <ClInclude Include="DlgInfoDiffusionTerminalUpgrade.h" />
+    <ClInclude Include="DlgInfoDiffusionTernimalPreview.h" />
+    <ClInclude Include="DlgInfoDiffusionXmlCfg.h" />
+    <ClInclude Include="DlgInfoDiffusionXmlUpdownload.h" />
+    <ClInclude Include="DlgInfrareCfg.h" />
+    <ClInclude Include="DlgInfrared.h" />
+    <ClInclude Include="DlgInqMixAudioInCfg.h" />
+    <ClInclude Include="DlgInquestCaseInfo.h" />
+    <ClInclude Include="DlgInquestDvr.h" />
+    <ClInclude Include="DlgInquestEvent.h" />
+    <ClInclude Include="DlgInquestFile.h" />
+    <ClInclude Include="DlgInqUserRight.h" />
+    <ClInclude Include="DlgInteractive.h" />
+    <ClInclude Include="DlgInteractiveControl.h" />
+    <ClInclude Include="DlgInteractiveFileInfoCfg.h" />
+    <ClInclude Include="DlgInteractiveScreenConfig.h" />
+    <ClInclude Include="DlgInteractiveScreenFileUpload.h" />
+    <ClInclude Include="DlgIOOutCfg.h" />
+    <ClInclude Include="DlgIPAccessCfgDDNS.h" />
+    <ClInclude Include="DlgIPAccessCfgEasyDDNS.h" />
+    <ClInclude Include="DlgIPAccessCfgIPServer.h" />
+    <ClInclude Include="DlgIPAccessCfgStreamServer.h" />
+    <ClInclude Include="DlgIPAddrFilterCfg.h" />
+    <ClInclude Include="DlgIPCFrontAbility.h" />
+    <ClInclude Include="DlgIPCPlateRecog.h" />
+    <ClInclude Include="DlgIPCSimpIntellCfg.h" />
+    <ClInclude Include="DlgIPCSpecial.h" />
+    <ClInclude Include="DlgIPCSpeclalEx.h" />
+    <ClInclude Include="DlgIPDomeLocalCfg.h" />
+    <ClInclude Include="DlgIscsiCfg.h" />
+    <ClInclude Include="DlgISPParamCfg.h" />
+    <ClInclude Include="DlgITCAblity.h" />
+    <ClInclude Include="DlgITCIOinCfg.h" />
+    <ClInclude Include="DlgITSBaseInfo.h" />
+    <ClInclude Include="DlgITSConfig.h" />
+    <ClInclude Include="DlgITSImageMergeCfg.h" />
+    <ClInclude Include="DlgITSIOinCfg.h" />
+    <ClInclude Include="DlgITSIpcCfg.h" />
+    <ClInclude Include="DlgITSMiniPost.h" />
+    <ClInclude Include="DlgITSMonitor.h" />
+    <ClInclude Include="DlgITSOverlapCfg.h" />
+    <ClInclude Include="DlgITSRoadInfo.h" />
+    <ClInclude Include="DlgITSUpload.h" />
+    <ClInclude Include="DlgITSWorkState.h" />
+    <ClInclude Include="DlgJpegCaptureCfg.h" />
+    <ClInclude Include="DlgJpegFTP.h" />
+    <ClInclude Include="DlgJPEGSnatchConfig.h" />
+    <ClInclude Include="DlgLampCfg.h" />
+    <ClInclude Include="DlgLampControl.h" />
+    <ClInclude Include="DlgLcdMatrixRelation.h" />
+    <ClInclude Include="DlgLcdMatrixSwitch.h" />
+    <ClInclude Include="DlgLcdParamCfg.h" />
+    <ClInclude Include="DlgLcdScene.h" />
+    <ClInclude Include="DlgLCDScreen.h" />
+    <ClInclude Include="DlgLCDScreenDisplay.h" />
+    <ClInclude Include="DlgLcdSerial.h" />
+    <ClInclude Include="DlgLcdServer.h" />
+    <ClInclude Include="DlgLcdSplice.h" />
+    <ClInclude Include="DlgLcdSwitchCfg.h" />
+    <ClInclude Include="DlgLcdUserCfg.h" />
+    <ClInclude Include="DlgLedConfig.h" />
+    <ClInclude Include="DlgLedConfigDisplay.h" />
+    <ClInclude Include="DlgLedConfigRecv.h" />
+    <ClInclude Include="DlgLEDTimerSwitch.h" />
+    <ClInclude Include="DlgLimitAngle.h" />
+    <ClInclude Include="DlgLinkStatus.h" />
+    <ClInclude Include="DlgLiteStorage.h" />
+    <ClInclude Include="DlgLocalConfig.h" />
+    <ClInclude Include="DlgLocalInputInfo.h" />
+    <ClInclude Include="DlgLocalLogConfig.h" />
+    <ClInclude Include="DlgLocalRecordSchedule.h" />
+    <ClInclude Include="DlgLockedInfo.h" />
+    <ClInclude Include="DlgLogSearch.h" />
+    <ClInclude Include="DlgManualSnap.h" />
+    <ClInclude Include="DlgMasterSlaveTracking.h" />
+    <ClInclude Include="DlgMatDecBigScrSplice.h" />
+    <ClInclude Include="DlgMatDecodeChanJoint.h" />
+    <ClInclude Include="DlgMatOutputCfg.h" />
+    <ClInclude Include="DlgMatUnitedSystem.h" />
+    <ClInclude Include="DlgMCUCall.h" />
+    <ClInclude Include="DlgMergeDecOsd.h" />
+    <ClInclude Include="DlgMergeDev.h" />
+    <ClInclude Include="DlgMergeDevPic.h" />
+    <ClInclude Include="DlgMergeDevResource.h" />
+    <ClInclude Include="DlgMicrophoneStatus.h" />
+    <ClInclude Include="DlgMixAudioInCfg.h" />
+    <ClInclude Include="DlgMixAudioOutCfg.h" />
+    <ClInclude Include="DlgMobileTriggerCfg.h" />
+    <ClInclude Include="DlgModifyRecord.h" />
+    <ClInclude Include="DlgMonitorInfo.h" />
+    <ClInclude Include="DlgMonitorLocation.h" />
+    <ClInclude Include="DlgMouseEvent.h" />
+    <ClInclude Include="DlgMultiCardCfg.h" />
+    <ClInclude Include="DlgMultilStreamRelChanCfg.h" />
+    <ClInclude Include="DlgNetraEventVedio.h" />
+    <ClInclude Include="DlgNetraHttps.h" />
+    <ClInclude Include="DlgNetraRecordPackage.h" />
+    <ClInclude Include="DlgNetraSeries.h" />
+    <ClInclude Include="DlgNetServiceCfg.h" />
+    <ClInclude Include="DlgNetworkAbility.h" />
+    <ClInclude Include="DlgNetworkBonding.h" />
+    <ClInclude Include="DlgNetworkFlowTest.h" />
+    <ClInclude Include="DlgNVRCfg.h" />
+    <ClInclude Include="DlgNVRIPCCfg.h" />
+    <ClInclude Include="DlgOneKeyBackupCfg.h" />
+    <ClInclude Include="DlgOneKeyPublish.h" />
+    <ClInclude Include="DlgOneOutputScheduleRuleCfg.h" />
+    <ClInclude Include="DlgOnlineUserList.h" />
+    <ClInclude Include="DlgOutput.h" />
+    <ClInclude Include="DlgOutputCtrl.h" />
+    <ClInclude Include="DlgOutputScheduleRuleCfg.h" />
+    <ClInclude Include="DlgPanoramaImage.h" />
+    <ClInclude Include="DlgPassiveTransCode.h" />
+    <ClInclude Include="DlgPassiveWin.h" />
+    <ClInclude Include="DlgPdcCalibration.h" />
+    <ClInclude Include="DlgPdcResult.h" />
+    <ClInclude Include="DlgPdcRuleCfg.h" />
+    <ClInclude Include="DlgPdcRuleCfgEx.h" />
+    <ClInclude Include="DlgPDCSearch.h" />
+    <ClInclude Include="DlgPersonnelStatis.h" />
+    <ClInclude Include="DlgPicModelCfg.h" />
+    <ClInclude Include="DlgPictureUpload.h" />
+    <ClInclude Include="DlgPlayBack.h" />
+    <ClInclude Include="DlgPlayConvert.h" />
+    <ClInclude Include="DlgPlayDvrRecord.h" />
+    <ClInclude Include="DlgPlayLocalFile.h" />
+    <ClInclude Include="DlgPlayLockFile.h" />
+    <ClInclude Include="DlgPlayMotion.h" />
+    <ClInclude Include="DlgPlayRemoteFile.h" />
+    <ClInclude Include="DlgPlayRemoteTime.h" />
+    <ClInclude Include="E:\brunch\美分7204ST\代码\code\win32\ClientDemo\DlgPosChanFilter.h" />
+    <ClInclude Include="E:\brunch\美分7204ST\代码\code\win32\ClientDemo\DlgPosConnectMode.h" />
+    <ClInclude Include="E:\brunch\美分7204ST\代码\code\win32\ClientDemo\DlgPosFilterEffect.h" />
+    <ClInclude Include="E:\brunch\美分7204ST\代码\code\win32\ClientDemo\DlgPosFilterRule.h" />
+    <ClInclude Include="DlgPositionTrackCfg.h" />
+    <ClInclude Include="E:\brunch\美分7204ST\代码\code\win32\ClientDemo\DlgPosManage.h" />
+    <ClInclude Include="E:\brunch\美分7204ST\代码\code\win32\ClientDemo\DlgPosRecvData.h" />
+    <ClInclude Include="E:\brunch\美分7204ST\代码\code\win32\ClientDemo\DlgPOSRegion.h" />
+    <ClInclude Include="E:\brunch\美分7204ST\代码\code\win32\ClientDemo\DlgPosSerialPortRecvData.h" />
+    <ClInclude Include="DlgPPPCfg.h" />
+    <ClInclude Include="DlgPPTDetect.h" />
+    <ClInclude Include="DlgPreviewSwitchCfg.h" />
+    <ClInclude Include="DlgPreviewWin.h" />
+    <ClInclude Include="DlgPrivateProtocolCfg.h" />
+    <ClInclude Include="DlgProductAcs.h" />
+    <ClInclude Include="DlgProductAlarmHostCfg.h" />
+    <ClInclude Include="DlgProductCfg.h" />
+    <ClInclude Include="DlgProductionTest.h" />
+    <ClInclude Include="DlgProductVcaCfg.h" />
+    <ClInclude Include="DlgPtzCfgCtrl.h" />
+    <ClInclude Include="DlgPTZCruise.h" />
+    <ClInclude Include="DlgPtzCtrl.h" />
+    <ClInclude Include="DlgPtzLockCfg.h" />
+    <ClInclude Include="DlgPtzParkActionCfg.h" />
+    <ClInclude Include="DlgPTZPreset.h" />
+    <ClInclude Include="DlgPtzScope.h" />
+    <ClInclude Include="DlgPTZTasks.h" />
+    <ClInclude Include="DlgPtzTrackParamCfg.h" />
+    <ClInclude Include="DlgPUStream.h" />
+    <ClInclude Include="DlgQuickAddIpc.h" />
+    <ClInclude Include="DlgRaidConfig.h" />
+    <ClInclude Include="DlgReaderAntiSneakHostCfg.h" />
+    <ClInclude Include="DlgRecordAbility.h" />
+    <ClInclude Include="DlgRecordControl.h" />
+    <ClInclude Include="DlgRecordHost.h" />
+    <ClInclude Include="DlgRecordHost1.h" />
+    <ClInclude Include="DlgRecordHostAbility.h" />
+    <ClInclude Include="DlgRecordHostAudioEffectiveCfg.h" />
+    <ClInclude Include="DlgRecordHostBackgroundPicCfg.h" />
+    <ClInclude Include="DlgRecordHostCfg.h" />
+    <ClInclude Include="DlgRecordHostDirectedStrategyCfg.h" />
+    <ClInclude Include="DlgRecordHostEndTime.h" />
+    <ClInclude Include="DlgRecordHostFilePublish.h" />
+    <ClInclude Include="DlgRecordHostFilmModeCfg.h" />
+    <ClInclude Include="DlgRecordHostFrameCfg.h" />
+    <ClInclude Include="DlgRecordHostRTMPCfg.h" />
+    <ClInclude Include="DlgRecordHostV120.h" />
+    <ClInclude Include="DlgRecordHostVideoCfg.h" />
+    <ClInclude Include="DlgRecordLabel.h" />
+    <ClInclude Include="DlgRecordPublishCfg.h" />
+    <ClInclude Include="DlgRecordStatus.h" />
+    <ClInclude Include="DlgRecordStreamTransType.h" />
+    <ClInclude Include="DlgRegionList.h" />
+    <ClInclude Include="DlgRemoteAlarmDetectFace.h" />
+    <ClInclude Include="DlgRemoteAlarmInHandle.h" />
+    <ClInclude Include="DlgRemoteAlarmInPtzInvoke.h" />
+    <ClInclude Include="DlgRemoteCfg.h" />
+    <ClInclude Include="DlgRemoteControlAbility.h" />
+    <ClInclude Include="DlgRemoteControllerCfg.h" />
+    <ClInclude Include="DlgRemoteControllerManage.h" />
+    <ClInclude Include="DlgRemoteControlPlay.h" />
+    <ClInclude Include="DlgRemoteControlStatus.h" />
+    <ClInclude Include="DlgRemoteEmailAddReceiver.h" />
+    <ClInclude Include="DlgRemoteFanException.h" />
+    <ClInclude Include="DlgRemoteHideAlarm.h" />
+    <ClInclude Include="DlgRemoteHideArea.h" />
+    <ClInclude Include="DlgRemoteIPAccess.h" />
+    <ClInclude Include="DlgRemoteKey.h" />
+    <ClInclude Include="DlgRemoteMotionDetect.h" />
+    <ClInclude Include="DlgRemoteNetNFS.h" />
+    <ClInclude Include="DlgRemotePullException.h" />
+    <ClInclude Include="DlgRemoteRecordSchedule.h" />
+    <ClInclude Include="DlgRemoteShowString.h" />
+    <ClInclude Include="DlgRemoteStreamRecordSchedule.h" />
+    <ClInclude Include="DlgRemoteVideoInLost.h" />
+    <ClInclude Include="DlgRemoteVideoInput.h" />
+    <ClInclude Include="DlgRemoteZone.h" />
+    <ClInclude Include="DlgRoiCfg.h" />
+    <ClInclude Include="DlgRtspConfig.h" />
+    <ClInclude Include="DlgSafeCabinState.h" />
+    <ClInclude Include="DlgSafetyCabin.h" />
+    <ClInclude Include="DlgScaleOutCfg.h" />
+    <ClInclude Include="DlgSceneChangeUpdate.h" />
+    <ClInclude Include="DlgSceneTimeCfg.h" />
+    <ClInclude Include="DlgScreenCtrl.h" />
+    <ClInclude Include="DlgScreenLogoCfg.h" />
+    <ClInclude Include="DlgScreenLogoCfgUniform.h" />
+    <ClInclude Include="DlgSDIAutoTrackCfg.h" />
+    <ClInclude Include="DlgSDIMatrix.h" />
+    <ClInclude Include="DlgSecurityCfg.h" />
+    <ClInclude Include="DlgSenceControl.h" />
+    <ClInclude Include="DlgSenceControlUniform.h" />
+    <ClInclude Include="DlgSensorAddPreview.h" />
+    <ClInclude Include="DlgSensorCfg.h" />
+    <ClInclude Include="DlgSerialTrans.h" />
+    <ClInclude Include="DlgSignalLightSync.h" />
+    <ClInclude Include="DlgSizeFilter.h" />
+    <ClInclude Include="DlgSlaveCameraInfo.h" />
+    <ClInclude Include="DlgSmartSearchPicture.h" />
+    <ClInclude Include="DlgSmartStoragedDetection.h" />
+    <ClInclude Include="DlgSneakAndLock.h" />
+    <ClInclude Include="DlgSnmpCfg.h" />
+    <ClInclude Include="DlgSplitterStartTrans.h" />
+    <ClInclude Include="DlgSplitterTransparent.h" />
+    <ClInclude Include="DlgStorageServerSwitch.h" />
+    <ClInclude Include="DlgStreamAttachInfoCfg.h" />
+    <ClInclude Include="DlgStreamID.h" />
+    <ClInclude Include="DlgStreamManualRecordAndLock.h" />
+    <ClInclude Include="DlgStreamRecordInfo.h" />
+    <ClInclude Include="DlgStreamRecordStatus.h" />
+    <ClInclude Include="DlgStreamSrcCfg.h" />
+    <ClInclude Include="DlgSubIPCCfg.h" />
+    <ClInclude Include="DlgSubITSCfg.h" />
+    <ClInclude Include="DlgSubsysNetCfg.h" />
+    <ClInclude Include="DlgSystemTimeAlarm.h" />
+    <ClInclude Include="DlgT1test.h" />
+    <ClInclude Include="DlgTalkMREx.h" />
+    <ClInclude Include="DlgTermGroup.h" />
+    <ClInclude Include="DlgTerminalConferenceStatus.h" />
+    <ClInclude Include="DlgTermManage.h" />
+    <ClInclude Include="DlgTermPlay.h" />
+    <ClInclude Include="DlgTermState.h" />
+    <ClInclude Include="DlgThermalDoubleSpectrum.h" />
+    <ClInclude Include="DlgThirdGenerationCfg.h" />
+    <ClInclude Include="DlgThscreen.h" />
+    <ClInclude Include="DlgTimeCorrect.h" />
+    <ClInclude Include="DlgTmeCfg.h" />
+    <ClInclude Include="DlgTPSRuleCfg.h" />
+    <ClInclude Include="DlgTransAutoReboot.h" />
+    <ClInclude Include="DlgTransCompression.h" />
+    <ClInclude Include="DlgTransConfig.h" />
+    <ClInclude Include="DlgTransDevStatus.h" />
+    <ClInclude Include="DlgTransStreamSrcCfg.h" />
+    <ClInclude Include="DlgTrialAudioActivation.h" />
+    <ClInclude Include="DlgTrialCaseParam.h" />
+    <ClInclude Include="DlgTrialDVR.h" />
+    <ClInclude Include="DlgTrialHostStatus.h" />
+    <ClInclude Include="DlgTrialPIPCfg.h" />
+    <ClInclude Include="DlgTsSeries.h" />
+    <ClInclude Include="DlgUniformInterface.h" />
+    <ClInclude Include="DlgUpgrade.h" />
+    <ClInclude Include="DlgUpgradeIPC.h" />
+    <ClInclude Include="DlgUploadCalibrationFile.h" />
+    <ClInclude Include="DlgUploadFile.h" />
+    <ClInclude Include="DlgUploadLogo.h" />
+    <ClInclude Include="DlgUpnpCfg.h" />
+    <ClInclude Include="DlgUpStreamCfg.h" />
+    <ClInclude Include="DlgVcaAidRuleCfg.h" />
+    <ClInclude Include="DlgVCAAlarmLogo.h" />
+    <ClInclude Include="DlgVcaAlarmTimeCfg.h" />
+    <ClInclude Include="DlgVcaAuxAreaList.h" />
+    <ClInclude Include="DlgVcaBaselineScene.h" />
+    <ClInclude Include="DlgVcaBehaviorCalibrate.h" />
+    <ClInclude Include="DlgVcaBehaviorCfg.h" />
+    <ClInclude Include="DlgVcaBlackList.h" />
+    <ClInclude Include="DlgVcaBVCalibrate.h" />
+    <ClInclude Include="DlgVcaChanCtrlCfg.h" />
+    <ClInclude Include="DlgVcaChannelWorkMode.h" />
+    <ClInclude Include="DlgVcaDataBase.h" />
+    <ClInclude Include="DlgVcaDetectionCfg.h" />
+    <ClInclude Include="DlgVCADetionCfg.h" />
+    <ClInclude Include="DlgVcaDevAbility.h" />
+    <ClInclude Include="DlgVcaDevAccessCfg.h" />
+    <ClInclude Include="DlgVcaDevChannel.h" />
+    <ClInclude Include="DlgVcaDrawMode.h" />
+    <ClInclude Include="DlgVcaEnterRegion.h" />
+    <ClInclude Include="DlgVcaFace.h" />
+    <ClInclude Include="DlgVcaFaceDataBase.h" />
+    <ClInclude Include="DlgVcaFaceDetect.h" />
+    <ClInclude Include="DlgVcaFaceMatchLogSearch.h" />
+    <ClInclude Include="DlgVcaFaceSnapCfg.h" />
+    <ClInclude Include="DlgVcaFindBackgroundPic.h" />
+    <ClInclude Include="DlgVcaFindSnapData.h" />
+    <ClInclude Include="DlgVcaForensicsModeCfg.h" />
+    <ClInclude Include="DlgVcaFunCfg.h" />
+    <ClInclude Include="DlgVcaITCTriggerCfg.h" />
+    <ClInclude Include="DlgVcaITSCalibrate.h" />
+    <ClInclude Include="DlgVcaITSCfg.h" />
+    <ClInclude Include="DlgVcaIvmsCfg.h" />
+    <ClInclude Include="DlgVcaIvmsSched.h" />
+    <ClInclude Include="DlgVcaLaneCfg.h" />
+    <ClInclude Include="DlgVcaLF.h" />
+    <ClInclude Include="DlgvcaMaskRegion.h" />
+    <ClInclude Include="DlgVcaObjectColor.h" />
+    <ClInclude Include="DlgVcaParamkey.h" />
+    <ClInclude Include="DlgVcaPositionRule.h" />
+    <ClInclude Include="DlgVcaRemoteChannel.h" />
+    <ClInclude Include="DlgVcaResetCounterCfg.h" />
+    <ClInclude Include="DlgVcaRuleCfg.h" />
+    <ClInclude Include="DlgVCARuleColorCfg.h" />
+    <ClInclude Include="DlgVcaSavePathConfig.h" />
+    <ClInclude Include="DlgVcaSceneCfg.h" />
+    <ClInclude Include="DlgVcaSceneITSCalibrate.h" />
+    <ClInclude Include="DlgVcaSceneLaneCfg.h" />
+    <ClInclude Include="DlgVcaSceneRegionList.h" />
+    <ClInclude Include="DlgVcaSceneTpsRuleCfg.h" />
+    <ClInclude Include="DlgVcaSingleProcImg.h" />
+    <ClInclude Include="DlgVcaSnapDatabase.h" />
+    <ClInclude Include="DlgVcaTrackCfg.h" />
+    <ClInclude Include="DlgVcaVQDAlarmPic.h" />
+    <ClInclude Include="DlgVcaVQDEventRule.h" />
+    <ClInclude Include="DlgVcaWorkStatus.h" />
+    <ClInclude Include="DlgVCSExternalMatrix.h" />
+    <ClInclude Include="DlgVedioAudioInCfg.h" />
+    <ClInclude Include="DlgVedioImgDB.h" />
+    <ClInclude Include="DlgVehicleCfg.h" />
+    <ClInclude Include="DlgVehicleControlCfg.h" />
+    <ClInclude Include="DlgVehicleMvaCfg.h" />
+    <ClInclude Include="DlgVideoIntercomAlarmCfg.h" />
+    <ClInclude Include="DlgVideoIntercomAuthCfg.h" />
+    <ClInclude Include="DlgVideoIntercomCall.h" />
+    <ClInclude Include="DlgVideoIntercomCallRoomCfg.h" />
+    <ClInclude Include="DlgVideoIntercomCfg.h" />
+    <ClInclude Include="DlgVideoIntercomDeviceIDCfg.h" />
+    <ClInclude Include="DlgVideoIntercomElevatorCfg.h" />
+    <ClInclude Include="DlgVideoIntercomGateway.h" />
+    <ClInclude Include="DlgVideoIntercomIOInCfg.h" />
+    <ClInclude Include="DlgVideoIntercomIOOutCfg.h" />
+    <ClInclude Include="DlgVideoIntercomNoticeDataCfg.h" />
+    <ClInclude Include="DlgVideoIntercomOpTimeCfg.h" />
+    <ClInclude Include="DlgVideoIntercomPrivilegePwdCfg.h" />
+    <ClInclude Include="DlgVideoIntercomRelateDevCfg.h" />
+    <ClInclude Include="DlgVideoIntercomStreamCfg.h" />
+    <ClInclude Include="DlgVideoOut.h" />
+    <ClInclude Include="DlgVideoOutResolutionCfg.h" />
+    <ClInclude Include="DlgVideoWallElse.h" />
+    <ClInclude Include="DlgVISDevInfo.h" />
+    <ClInclude Include="DlgVISRegisterInfo.h" />
+    <ClInclude Include="DlgVoiceTalk.h" />
+    <ClInclude Include="DlgVQDCfg.h" />
+    <ClInclude Include="DlgVqdPlan.h" />
+    <ClInclude Include="DlgWall.h" />
+    <ClInclude Include="DlgWallBasemapWin.h" />
+    <ClInclude Include="DlgWallCfg.h" />
+    <ClInclude Include="DlgWallCfgUniform.h" />
+    <ClInclude Include="DlgWallControl.h" />
+    <ClInclude Include="DlgWallPreview.h" />
+    <ClInclude Include="DlgWallVirLED.h" />
+    <ClInclude Include="DlgWallWin.h" />
+    <ClInclude Include="DlgWallWinVideoWall.h" />
+    <ClInclude Include="DlgWD1Enable.h" />
+    <ClInclude Include="DlgWDRCfg.h" />
+    <ClInclude Include="DlgWeekPlan.h" />
+    <ClInclude Include="DlgWhiteList.h" />
+    <ClInclude Include="DlgWifi.h" />
+    <ClInclude Include="DlgWifiDHCPCfg.h" />
+    <ClInclude Include="DlgWIFIServerCfg.h" />
+    <ClInclude Include="DlgWinPreview.h" />
+    <ClInclude Include="DlgWirelessBusinessSearch.h" />
+    <ClInclude Include="DlgWirelessDial.h" />
+    <ClInclude Include="DlgWirelessServer.h" />
+    <ClInclude Include="DlgXmlAbility.h" />
+    <ClInclude Include="DlgXmlAlarmAbility.h" />
+    <ClInclude Include="DlgXmlDecoderAbility.h" />
+    <ClInclude Include="DlgXmlEventAbility.h" />
+    <ClInclude Include="DlgXmlItcAbility.h" />
+    <ClInclude Include="DlgXmlJpegCapAbility.h" />
+    <ClInclude Include="DlgXmlLCDAbility.h" />
+    <ClInclude Include="DlgXmlNetAppAbility.h" />
+    <ClInclude Include="DlgXmlRaidAbility.h" />
+    <ClInclude Include="DlgXmlSerialAbility.h" />
+    <ClInclude Include="DlgXmlVideoPic.h" />
+    <ClInclude Include="DlgXmlWallAblity.h" />
+    <ClInclude Include="DlgZeroChanCfg.h" />
+    <ClInclude Include="DlgZoneLinkageChanCfg.h" />
+    <ClInclude Include="DrawFun.h" />
+    <ClInclude Include="GeneralDef.h" />
+    <ClInclude Include="InfoDiffusionParamsConvert.h" />
+    <ClInclude Include="..\..\src\export\header\InterfaceBase.h" />
+    <ClInclude Include="IPExport.h" />
+    <ClInclude Include="IPHlpApi.h" />
+    <ClInclude Include="IPTypes.h" />
+    <ClInclude Include="JPEGPicDownload.h" />
+    <ClInclude Include="Markup.h" />
+    <ClInclude Include="MatCodeSplitter.h" />
+    <ClInclude Include="MatCycLink.h" />
+    <ClInclude Include="MatDecDnsCfg.h" />
+    <ClInclude Include="MatDecoderStatus.h" />
+    <ClInclude Include="MatDispChan.h" />
+    <ClInclude Include="MatDispChanControl.h" />
+    <ClInclude Include="MatDynamicTest.h" />
+    <ClInclude Include="MatPassive.h" />
+    <ClInclude Include="MatPlayBack.h" />
+    <ClInclude Include="MatTrans.h" />
+    <ClInclude Include="MatVedioPlatform.h" />
+    <ClInclude Include="ModifyRecord.h" />
+    <ClInclude Include="Picture.h" />
+    <ClInclude Include="PTZButton.h" />
+    <ClInclude Include="PTZButton1.h" />
+    <ClInclude Include="PtzControl.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SoundIn.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SubDlgAdapterCfg.h" />
+    <ClInclude Include="SubDlgAlarmCfg.h" />
+    <ClInclude Include="SubDlgArrayCfg.h" />
+    <ClInclude Include="SubDlgATMInfoCfg.h" />
+    <ClInclude Include="SubDlgBTS.h" />
+    <ClInclude Include="SubDlgChanCfg.h" />
+    <ClInclude Include="SubDlgCVRCfg.h" />
+    <ClInclude Include="SubDlgDeviceCfg.h" />
+    <ClInclude Include="SubDlgDVRNVRCfg.h" />
+    <ClInclude Include="SubDlgExceptionCfg.h" />
+    <ClInclude Include="SubDlgMatDeccfg.h" />
+    <ClInclude Include="SubDlgNetworkCfg.h" />
+    <ClInclude Include="SubDlgPDCfg.h" />
+    <ClInclude Include="SubDlgPreviewCfgV30.h" />
+    <ClInclude Include="SubDlgSerialCfg.h" />
+    <ClInclude Include="SubDlgUserCfg.h" />
+    <ClInclude Include="SubDlgVDCfg.h" />
+    <ClInclude Include="SubDlgWndSequence.h" />
+    <ClInclude Include="TimeSegment.h" />
+    <ClInclude Include="UserDlg.h" />
+    <ClInclude Include="VcaCommonOperations.h" />
+    <ClInclude Include="WaveSound.h" />
+    <ClInclude Include="XMLParamsConvert.h" />
+    <ClInclude Include="XmlUserAbility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Alarm.bmp" />
+    <Image Include="res\audio.bmp" />
+    <Image Include="res\bitmap_c.bmp" />
+    <Image Include="res\camera.bmp" />
+    <Image Include="res\camera.ico" />
+    <Image Include="res\ClientDemo.ico" />
+    <Image Include="res\dev_alarm.bmp" />
+    <Image Include="res\fortify.bmp" />
+    <Image Include="res\fortify_alarm.bmp" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\ico00002.ico" />
+    <Image Include="res\ico00003.ico" />
+    <Image Include="res\ico00004.ico" />
+    <Image Include="res\ico00005.ico" />
+    <Image Include="res\ico00006.ico" />
+    <Image Include="res\ico00007.ico" />
+    <Image Include="res\ico00008.ico" />
+    <Image Include="res\ico00009.ico" />
+    <Image Include="res\ico00010.ico" />
+    <Image Include="res\ico00011.ico" />
+    <Image Include="res\ico1.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\icon2.ico" />
+    <Image Include="res\icon8.ico" />
+    <Image Include="res\IPChan.bmp" />
+    <Image Include="res\login.bmp" />
+    <Image Include="res\logout.bmp" />
+    <Image Include="res\p_r_a.bmp" />
+    <Image Include="res\PAUSE_ENABLE.ICO" />
+    <Image Include="res\play.bmp" />
+    <Image Include="res\PLAY_DISABLE.ICO" />
+    <Image Include="res\PLAY_ENABLE.ICO" />
+    <Image Include="res\playAndAlarm.bmp" />
+    <Image Include="res\rec.bmp" />
+    <Image Include="res\rec_play.bmp" />
+    <Image Include="res\step_disable.ico" />
+    <Image Include="res\STOP.ICO" />
+    <Image Include="res\STOP_DISABLE.ICO" />
+    <Image Include="res\tree.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\ClientDemo.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Modification.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource.hm" />
+    <None Include="resourceEn.hm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties _x007B_8856F961-340A-11D0-A96B-00C04FD705A2_x007D_="CExplorer" RESOURCE_FILE="ClientDemo.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

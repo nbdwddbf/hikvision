@@ -1,0 +1,21 @@
+【Demo内容说明】
+-------------------------------------
+1. 实现预览、抓图(BMP、JPEG)、客户端录像、云台控制(2014-7-4)
+
+2. 设备通道号在界面上手动输入，64路以下NVR的IP通道一般从33开始
+
+3. bin文件夹下为已编译的可执行程序（Release版本）
+
+4. SDK日志保存路径："C:\\SdkLog\\"（2014-7-4）
+
+【注意事项】
+------------------------------------
+1. 请到海康威视官网下载最新版本设备网络SDK：http://www.hikvision.com/Cn/download_more_401.html
+
+2. 请将设备网络SDK开发包【库文件】里的HCNetSDK.dll、HCCore.dll、HCNetSDKCom文件夹、PlayCtrl.dll、SuperRender.dll、AudioRender.dll、D3DX9_43.dll、D3DCompiler_43.dll等文件均拷贝到bin文件夹下。
+
+   HCNetSDKCom文件夹（包含里面的功能组件dll库文件）需要和HCNetSDK.dll、HCCore.dll一起加载，放在同一个目录下，且HCNetSDKCom文件夹名不能修改。
+
+3. 如果自行开发软件不能正常实现相应功能，而且程序没有指定加载的dll库路径，请在程序运行的情况下尝试删除HCNetSDK.dll。如果可以删除，说明程序可能调用到系统盘Windows->System32目录下的dll文件，建议删除或者更新该目录下的相关dll文件；如果不能删除，dll文件右键选择属性确认SDK库版本。
+
+4. 如按上述步骤操作后还是不能实现相应功能，请根据NET_DVR_GetLastError返回的错误号判断原因。

@@ -1,0 +1,359 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\RealPlay.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\RealPlay.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 RealPlay"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "RealPlay 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_REALPLAY_DIALOG DIALOGEX 0, 0, 507, 355
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "RealPlay"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "IPAddress1",IDC_IPADDRESS_DEV,"SysIPAddress32",
+                    WS_TABSTOP,41,13,73,13
+    EDITTEXT        IDC_EDIT_PORT,143,13,41,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,213,13,52,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PWD,309,13,45,13,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Login",IDC_BUTTON_LOGIN,374,13,33,19
+    LTEXT           "Dev IP",IDC_STATIC,15,16,25,8
+    LTEXT           "Port",IDC_STATIC,121,16,17,8
+    LTEXT           "User",IDC_STATIC,191,16,17,8
+    LTEXT           "Password",IDC_STATIC,271,16,33,8
+    LTEXT           "",IDC_STATIC_PLAY,85,43,311,258,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "左",IDC_BTN_PTZ_LEFT,411,65,20,13,BS_FLAT
+    PUSHBUTTON      "下",IDC_BTN_PTZ_DOWN,439,81,20,13,BS_FLAT
+    PUSHBUTTON      "上",IDC_BTN_PTZ_UP,439,49,20,13,BS_FLAT
+    PUSHBUTTON      "右",IDC_BTN_PTZ_RIGHT,467,66,20,13,BS_FLAT
+    LTEXT           "调焦",IDC_STATIC6,441,102,17,10
+    LTEXT           "聚焦",IDC_STATIC7,441,114,17,10
+    LTEXT           "光圈",IDC_STATIC8,441,128,17,10
+    PUSHBUTTON      "缩",IDC_BTN_ZOOM_IN,411,98,20,13,BS_FLAT
+    PUSHBUTTON      "近",IDC_BTN_FOCUS_NEAR,411,112,20,13,BS_FLAT
+    PUSHBUTTON      "大",IDC_BTN_IRIS_OPEN,411,126,20,13,BS_FLAT
+    PUSHBUTTON      "伸",IDC_BTN_ZOOM_OUT,467,98,20,13,BS_FLAT
+    PUSHBUTTON      "远",IDC_BTN_FOCUS_FAR,467,112,20,13,BS_FLAT
+    PUSHBUTTON      "小",IDC_BTN_IRIS_CLOSE,467,126,20,13,BS_FLAT
+    GROUPBOX        "云台控制",IDC_STATIC,399,38,101,142
+    DEFPUSHBUTTON   "播放",IDC_BUTTON_PLAY,45,313,41,21
+    DEFPUSHBUTTON   "录像",IDC_BUTTON_RECORD,107,313,41,21
+    CONTROL         "Tree1",IDC_TREE_CHAN,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,7,43,75,257
+    LTEXT           "云台速度",IDC_STATIC,408,183,33,8
+    COMBOBOX        IDC_COMBO_PTZ_SPEED,452,181,48,78,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "抓图",IDC_BUTTON_CAPTURE,168,313,41,21
+    COMBOBOX        IDC_COMBO_PRESET,407,207,28,87,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "调用",IDC_BUTTON_PRESET_GOTO,438,207,18,14
+    PUSHBUTTON      "设置",IDC_BUTTON_PRESET_SET,457,207,18,14
+    GROUPBOX        "预置点",IDC_STATIC,401,195,99,32
+    PUSHBUTTON      "删除",IDC_BUTTON_PRESET_DEL,476,207,18,14
+    COMBOBOX        IDC_COMBO_SEQ,407,242,32,93,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "调用",IDC_BUTTON_SEQ_GOTO,447,241,21,14
+    PUSHBUTTON      "设置",IDC_BUTTON_SEQ_SET,471,241,21,14
+    GROUPBOX        "巡航路径",IDC_STATIC,401,230,99,32
+    GROUPBOX        "轨迹记录",IDC_STATIC,401,264,99,39
+    PUSHBUTTON      "开始",IDC_BUTTON_TRACK_START,404,280,29,16
+    PUSHBUTTON      "停止",IDC_BUTTON_TRACK_STOP,436,280,29,16
+    PUSHBUTTON      "运行",IDC_BUTTON_TRACK_RUN,467,280,29,16
+    PUSHBUTTON      "左上",IDC_BTN_PTZ_UPLEFT,411,49,20,13,BS_FLAT
+    PUSHBUTTON      "右上",IDC_BTN_PTZ_UPRIGHT,467,49,20,13,BS_FLAT
+    PUSHBUTTON      "左下",IDC_BTN_PTZ_DOWNLEFT,411,81,20,13,BS_FLAT
+    PUSHBUTTON      "右下",IDC_BTN_PTZ_DOWNRIGHT,467,81,20,13,BS_FLAT
+    PUSHBUTTON      "灯光",IDC_BTN_LIGHT_PWRON,411,143,20,13,BS_FLAT
+    PUSHBUTTON      "雨刷",IDC_BTN_WIPER_PWRON,439,143,20,13,BS_FLAT
+    PUSHBUTTON      "风扇",IDC_BTN_FAN_PWRON,411,159,20,13,BS_FLAT
+    PUSHBUTTON      "加热",IDC_BTN_HEATER_PWRON,439,159,20,13,BS_FLAT
+    PUSHBUTTON      "辅助1",IDC_BTN_AUX_PWRON,462,143,25,13,BS_FLAT
+    PUSHBUTTON      "自动",IDC_BTN_PTZ_AUTO,439,66,20,13,BS_FLAT
+    PUSHBUTTON      "辅助2",IDC_BTN_AUX_PWRON2,462,159,25,13,BS_FLAT
+    GROUPBOX        "抓图类型",IDC_STATIC,226,303,72,37
+    COMBOBOX        IDC_COMBO_PIC_TYPE,236,318,50,35,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_JPG_SIZE,313,318,35,77,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_JPG_QUALITY,356,318,35,43,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "JPEG参数",IDC_STATIC_JPGPARA,307,303,90,37
+END
+
+IDD_DLG_PTZ_CRUISE DIALOG DISCARDABLE  0, 0, 285, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加巡航路径"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "巡航路径",IDC_STATIC_CRUISE,21,15,50,9
+    COMBOBOX        IDC_COMBO_CRUISE_ROUTE,89,13,90,189,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "添加巡航点",IDC_BUTTON_ADD,87,58,60,15
+    PUSHBUTTON      "删除巡航点",IDC_BUTTON_DEL,161,58,60,15
+    COMBOBOX        IDC_COMBO_CRUISE_POINT,51,37,28,109,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,13,29,258,27
+    LTEXT           "巡航点",IDC_STATIC,21,39,24,13
+    COMBOBOX        IDC_COMBO_CRUISE_PRESET,115,37,28,121,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "预置点",IDC_STATIC,87,39,24,13
+    COMBOBOX        IDC_COMBO_CRUISE_TIME,183,37,28,113,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "时间(sec)",IDC_STATIC,145,39,38,13
+    COMBOBOX        IDC_COMBO_CRUISE_SPEED,239,37,28,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "速度",IDC_STATIC,213,39,24,13
+    PUSHBUTTON      "退出",IDC_BTN_EXIT,227,58,39,15
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "RealPlay Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "RealPlay\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "RealPlay.EXE\0"
+            VALUE "ProductName", "RealPlay 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_REALPLAY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 500
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 346
+    END
+
+    IDD_DLG_PTZ_CRUISE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_REALPLAY_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_PTZ_SPEED, 0x403, 5, 0
+0xacc4, 0xcfc8, "\000" 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0032, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0033, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0034, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0036, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0037, 
+    IDC_COMBO_PIC_TYPE, 0x403, 8, 0
+0x4d42, 0xcd50, 0xc6bc, 0x00ac, 
+    IDC_COMBO_PIC_TYPE, 0x403, 9, 0
+0x504a, 0x4745, 0xbccd, 0xacc6, "\000" 
+    IDC_COMBO_JPG_SIZE, 0x403, 4, 0
+0x4943, 0x0046, 
+    IDC_COMBO_JPG_SIZE, 0x403, 5, 0
+0x4351, 0x4649, "\000" 
+    IDC_COMBO_JPG_SIZE, 0x403, 3, 0
+0x3144, "\000" 
+    IDC_COMBO_JPG_SIZE, 0x403, 5, 0
+0x5855, 0x4147, "\000" 
+    IDC_COMBO_JPG_SIZE, 0x403, 5, 0
+0x5653, 0x4147, "\000" 
+    IDC_COMBO_JPG_SIZE, 0x403, 7, 0
+0x4448, 0x3237, 0x7030, "\000" 
+    IDC_COMBO_JPG_SIZE, 0x403, 4, 0
+0x4756, 0x0041, 
+    IDC_COMBO_JPG_SIZE, 0x403, 5, 0
+0x5658, 0x4147, "\000" 
+    IDC_COMBO_JPG_SIZE, 0x403, 7, 0
+0x4448, 0x3039, 0x7030, "\000" 
+    IDC_COMBO_JPG_QUALITY, 0x403, 5, 0
+0xeed7, 0xc3ba, "\000" 
+    IDC_COMBO_JPG_QUALITY, 0x403, 5, 0
+0xcfbd, 0xc3ba, "\000" 
+    IDC_COMBO_JPG_QUALITY, 0x403, 5, 0
+0xbbd2, 0xe3b0, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 RealPlay(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\RealPlay.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
